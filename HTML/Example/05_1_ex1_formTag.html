@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+
+    </form>
+    <!-- action: 태그 안의 내용을 처리해줄 서버 프로그램의 url
+         method: 사용자가 입력한 내용을 서버 쪽 프로그램으로 어떻게 넘겨줄 것인지 지정
+            get : 주소 표시줄에 사용자가 입력한 내용이 그대로 드러남
+            post: 입력내용길이 제한x, 입력한 내용도 드러나지 않음 -->
+
+    <fieldset>
+        <legend>고객정보</legend>
+            <label for="id">ID</label>
+            <!-- 명시적으로 적은 label 
+                명시적으로  label을 적는 것을 권장-->
+            <!-- for - 어떤 input타입과 짝을 지어주냐
+                for은 input의 id와 같아야함
+
+                label이 없을 때에는 상자를 눌러야만 입력할 수 있음.
+                label이 있을 때에는 라벨을 눌러도 상자안에 입력할수 있음
+                label은 사용자의 편의를 위해 사용
+                -->
+            <input type="text" name="id" id="id" maxlength="10">
+            <!-- id속성값은 고유속성이기 때문에 무조건 1개 여야함
+            name은 중복 가능 -->
+
+            <!-- <br>
+            <label>
+                ID_1
+                <input type="text" name="id_1" id="id_1">
+            </label> -->
+            <!-- 암시적으로 적은 label -->
+
+            <br>
+            <label for="pw">PW</label>
+            <input type="password" name="pw" id="pw" maxlength="15">
+            <br>
+            <label for="search">search</label>
+            <input type="search" name="search" id="search">
+            <br>
+            <label for="url">url</label>
+            <input type="url" name="url" id="url">
+            <br>
+            <label for="email">email</label>
+            <input type="email" name="email" id="email">
+            <br>
+            <label for="tel">tel</label>
+            <input type="tel" name="tel" id="tel">
+            <br>
+            
+            <ul>
+                <li><label for="strawberry">딸기</label>
+                    <input value="1" type="checkbox" name="strawberry" id="strawberry">
+                </li>
+                <li><label for="banana">바나나</label>
+                    <input value="2" type="checkbox" name="banana" id="banana">
+                </li>
+                <li><label for="watermelon">수박</label>
+                    <input value="3" type="checkbox" name="watermelon" id="watermelon">
+                </li>
+            </ul>
+            <!-- checkbox는 유저가 원하는 모든 정보를 선택가능
+                value의 값이 백엔드로 넘어감. 약속된 언어를 주로 사용 -->
+            <ul>
+                <li><label for="strawberry">딸기</label>
+                    <input value="sb" type="radio" name="fruit" id="r_strawberry">
+                </li>
+                <li><label for="banana">바나나</label>
+                    <input value="bn" type="radio" name="fruit" id="r_banana">
+                </li>
+                <li><label for="watermelon">수박</label>
+                    <input value="wm" type="radio" name="fruit" id="r_watermelon">
+                </li>
+            </ul>
+            <!-- radio는 유저가 원하는 한가지 선택
+                name 통일 시켜줌 -->
+            <br>
+            <label for="number">Number</label>
+            <input type="number" value="5" min="3" max="10">
+            <br>
+            <label for="range">Range</label>
+            <input type="range" value="0" min="2" max="5" >
+            <br>
+            <label for="date">Date</label>
+            <input type="date" min="2023-03-01" max="2023-12-31">
+            <button>버튼</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>배송정보</legend>
+    </fieldset>
+
+
+</body>
+</html>

@@ -7,33 +7,48 @@
     <title>Document</title>
     <style>table{border : 1px solid black;
              border-collapse: collapse;}
-    th,td{border : 1px solid black;}</style>
+    th,td{border : 1px solid black;}
+    .col1{background-color: yellow;}
+    .col2{background-color: green;}</style>
 
 </head>
 <body>
     <!--tr태그는 행 / td태그는 열  / th태그는 제목느낌 -->
+    <!--<thead>태그, <tbody> 태그, <tfoot> 태그를 사용하면
+    영역을 묶어주어 가시성이 좋아진다. -->
     <table>
         <caption>반 성적</caption>
-        <tr>
+        <thead>
+            <tr>
             <th>1반</th>
             <th>2반</th>
             <th>3반</th>
-        </tr>
-        <tr>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
             <td>70점</td>
             <td>85점</td>
             <td>90점</td>
-        </tr>
-        <tr>
+            </tr>
+            <tr>
             <td>80점</td>
             <td>85점</td>
             <td>60점</td>
-        </tr>    
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+            <td>80점</td>
+            <td>85점</td>
+            <td>60점</td>
+            </tr>   
+        </tfoot> 
     </table>
-
+    <p>
     <table>
         <caption>반 성적</caption>
-        <tr>
+            <tr>
             <th>1반</th>
             <td>90점</td>
         </tr>
@@ -46,6 +61,59 @@
             <td>85점</td>
         </tr>    
     </table>
+    </p>
+    <p>
+    <table>
+        <caption>학급 성적표</caption>
+        <!--col = 열 / row = 행 
+            colgroup은 col을 묶어주는 역할
+            colspan은 열을,rowspan은 행을 합쳐주는 역할
+            합칠경우에 기존에 있던 칸들은 안지워지기 때문에 따로 지워줘야함
+         -->
+
+        <colgroup>
+            <col class="col1">
+            <col class="col2">
+            <col>
+            <col>
+            <col>
+            <col>
+    </colgroup>
+        <tr>
+            <th>반</th>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+            <th>과학</th>
+        </tr>
+        <tr>
+            <td rowspan="2">1반</td>
+            <td>홍길동</td>
+            <td>100</td>
+            <td>90</td>
+            <td>80</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            
+            <td>김철수</td>
+            <td>100</td>
+            <td>70</td>
+            <td>90</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td colspan="2">평균</td>
+            
+            <td>100</td>
+            <td>80</td>
+            <td>85</td>
+            <td>82.5</td>
+        </tr>
+
+    </table>
+</p>
 
 </body>
 </html>
