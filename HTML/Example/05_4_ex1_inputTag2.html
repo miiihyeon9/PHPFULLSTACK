@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 크롤링: 이미 구현된 사이트 베끼는 것 -->
+    <form action="">
+        <label for="textbox">메모</label>
+        <textarea name="memo" id="textbox" cols="30" rows="10"></textarea>
+        <br>
+        <select name="select" id="select" >
+            <option value="0">탕수육</option>
+            <option value="1">짜장면</option>
+            <option value="2" selected>밥</option>
+            <option value="3">커피</option>
+        </select>
+        <label for="cook">요리</label>
+        <input type="text" id="cook" list="datalist">
+        <datalist name="datalist" id="datalist">
+            <option value="0">밥</option>
+            <option value="1">돈까스</option>
+            <option value="2">물</option>
+        </datalist>
+        <!-- datalist는 input태그와 함께 적어야 함.
+            input의 list속성과 datalist의 id와 똑같이 적어야함
+            value값도 함께보여 데이터보안에 문제가 생길 수 있어서 잘 사용하지 않는다.-->
+
+        <br>
+        <br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button">Button</button>
+            <!-- 웹접근성-->
+
+    </form>
+
+</body>
+</html>

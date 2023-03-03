@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>고객정보</legend>
+            <label for="id">아이디</label>
+            <input type="text" name="id" id="id" autofocus required placeholder="10자까지 입력해주세요.">
+            <!-- autofocus: 페이지를 불러왔을 때 원하는 요소에 마우스 포인터 표시
+                placeholder : 힌트표시 
+                사용자의 편의성을 위해서 -->
+            <br>
+            <label for="pw">패스워드</label>
+            <input type="password" name="password" id="pw">
+            <br>
+            <label for="text"></label>
+            <input type="text" name="text" id="text" readonly value="참조">
+            <!-- required 필수입력사항 -->
+            
+            <br>
+            <ul>
+                <li><label for="strawberry">딸기</label>
+                    <input value="1" type="checkbox" name="strawberry" id="strawberry">
+                </li>
+                <li><label for="banana">바나나</label>
+                    <input checked value="2" type="checkbox" name="banana" id="banana">
+                </li>
+                <li><label for="watermelon">수박</label>
+                    <input value="3" type="checkbox" name="watermelon" id="watermelon">
+                </li>
+            </ul>
+            <!-- checkbox에 페이지 처음부터 체크상태로 표시하고 싶을 때 checked속성 사용 
+                radio에도 사용가능
+                복수 선택할 때 checkbox 많이 사용-->
+                <ul>
+                    <li><label for="strawberry">딸기</label>
+                        <input value="sb" checked type="radio" name="fruit" id="r_strawberry">
+                    </li>
+                    <li><label for="banana">바나나</label>
+                        <input value="bn" type="radio" name="fruit" id="r_banana">
+                    </li>
+                    <li><label for="watermelon">수박</label>
+                        <input value="wm" type="radio" name="fruit" id="r_watermelon">
+                    </li>
+                </ul>
+            <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- p160-->
+    <h1>회원 가입을 환영합니다</h1>
+    <form action="">
+        <fieldset>
+            <legend>사용자정보</legend>
+            <ul>
+                <li>
+                    <label for="id">아이디</label>
+                    <input type="text" name="id" id="id" required autofocus placeholder="4자 ~ 10자 사이, 공백없이">
+                </li>
+                <li>
+                    <label for="email">이메일</label>
+                    <input type="email" name="email" id="email">
+                </li>
+                <li>
+                    <label for="pw1">비밀번호</label>
+                    <input type="password" name="pw1" id="pw1" required placeholder="문자와 숫자, 특수 기호 포함">
+                </li>
+                <li>
+                    <label for="pw2">비밀번호 확인</label>
+                    <input type="password" name="pw2" id="pw2" required >
+                </li>
+            
+                <li>
+                    <span>가입경로</span>
+                    <!-- span : 마크업  -->
+                    <select name="path" id="path">
+                        <option value="0">블로그</option>
+                        <option value="1">지인소개</option>
+                        <option value="2" selected>기타</option>
+                    </select>
+                    
+                </li>
+                <li>
+                    <label for="memo">메모</label>
+                    <textarea name="memo" id="memo" cols="50" rows="5" placeholder="남길 말씀이 있다면 여기에"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>이벤트와 새로운 소식</legend>
+            <div>
+                <input type="radio" name="mailing" id="mailingYes" value="mailingY">
+                <label for="mailingYes">메일 수신</label>
+                <input type="radio" name="mailing" id="mailingNo" value="mailingN" checked>
+                <label for="mailingNo">메일 수신 안함</label>
+            </div>
+            <!-- 하나의 공통된 주제로 나타내는 것은 하나로 묶어주는 것이 좋음 -->
+            <!-- 하나의 공통된 radio일 경우 name은 똑같이 해주어야 한다.  -->
+            <!-- value값은 서버에 데이터를 전송했을 때 서버에서 받는 값 -->
+        </fieldset>
+                <input type="submit" value="가입하기" name="submit" id="submit">
+                <input type="reset" value="취소" name="reset" id="reset">
+                <!-- <button >버튼 가입하기</button>
+                <input type="button" value="버튼 가입하기">
+                button태그를 사용하면 브라우저에서도 input button으로 인식하지만
+                브라우저마다 에러가 발생할 수 있기 때문에 지양함.-->
+                <!-- name은 데이터를 전송했을 때 서버에서의 이름도 name으로 전송됨
+                    submit과 reset은 name을 무조건 적을 필요는 없음
+                    id는 css, javascript에서 사용하기 때문에 적어주는 것이 좋음-->
+        
+
+    </form>
+</body>
+</html>
