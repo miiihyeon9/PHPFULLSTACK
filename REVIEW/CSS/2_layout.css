@@ -1,0 +1,29 @@
+#container {
+    width :1200px;
+    margin : 20px auto;
+}
+
+#header {
+    width:1200px;
+    height:120px;
+    background-color: black;
+}
+
+#sidebar {
+    width : 300px;
+    height : 600px;
+    background-color: gray ;
+    float: left;
+}
+
+#content {
+    width : 900px;
+    height : 600px;
+
+}
+
+#footer{
+    width : 1200px;
+    height : 100px;
+    background-color: black;
+}

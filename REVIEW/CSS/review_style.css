@@ -1,0 +1,38 @@
+*{font-size: 18px;
+}
+.information{
+    width:720px;
+    height: 750px;
+    margin: 0 auto;
+    transform: translateY(90px);
+    border : 2px solid black;
+}
+
+.list{
+    list-style-type : none;
+    margin: 20px;
+}
+#id{transform: translateX(54px);}
+#email{transform: translateX(55px);}
+#pw1{transform : translateX(38px);}
+#path{transform : translateX(42px);}
+#id,#email,#pw1,#pw2{width: 250px;
+                    height: 30px;}
+
+#mailing{margin-top: 20px;}
+
+#submit, #reset { margin-top: 20px;
+                margin-left: 10px;}
+h1 { font-size: 40px;
+    text-decoration: underline 2px;
+    text-shadow: 5px 5px 5px gray;
+    padding-left: 20px;}
+
+.container1{width:660px;
+            height: 450px;}
+
+.container2{width:660px;
+            height:55px;
+            }
+.container1,.container2{ transform: translateX(10px);}
+
