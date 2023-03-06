@@ -1,0 +1,27 @@
+.tl_left{
+    text-align: left;
+    }
+/* text-align : left 기본값 */
+.tl_right{
+    text-align: right;
+    }
+
+.tl_center{
+    text-align: center;
+    }
+
+.tl_height{
+    line-height: 1.5em;
+    background-color: #ccccccde;
+    height : 300px;
+    text-align: center;
+    line-height: 300px;
+    }
+/* text를 가운데 
+    heigth와 line-height을 동일하게 작성 */
+
+.tl_deco{
+    text-decoration : line-through;
+    /* text-decoration : line-through; -> 취소선 */
+    /*  */
+    }

@@ -1,0 +1,9 @@
+li{
+    list-style-type: none;
+    line-height: 2em;
+}
+
+.text{
+    color : #ad3000;
+    font-weight : 900;
+}

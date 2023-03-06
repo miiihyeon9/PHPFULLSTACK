@@ -1,0 +1,40 @@
+
+h1{
+    display: inline-block;
+    color: #ff0000;
+    border: 3px solid #f79605;
+    
+}
+h2 {
+    display: inline-block;
+    color : #1118f0;
+    border: 3px solid #f79605;
+}
+
+/* .list{
+    width : 300px;
+    border: 3px solid #f79605;
+    color : #24c90e;
+} */
+
+ol{
+    display: inline-block;
+    border: 3px solid #f79605;
+    color : #24c90e;
+    
+}
+
+/* table{
+    border-collapse: collapse;
+}
+
+th,td{
+    border:1px solid #000;
+    padding :10px;
+}  내가 작성한 코드*/
+
+table,th,td{
+    border-collapse: collapse;
+    border:1px solid #000;
+    padding :10px;
+}

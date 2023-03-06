@@ -1,0 +1,20 @@
+.cook_1{
+    list-style-type: decimal;
+    list-style-position : outside;
+    }
+
+/* outside 기본값
+    inside 한번 더 들여쓰기
+     */
+
+/* css에 순서 태그가 있기 때문에 
+    html에서는 ul를 사용하고 css로 설정하기 때문에 
+    ol태그를 많이 쓰지 않음. */
+
+.cook_2{
+    list-style: url(../img/cat.PNG);
+}
+
+.cook_3{
+    list-style: decimal inside;
+}

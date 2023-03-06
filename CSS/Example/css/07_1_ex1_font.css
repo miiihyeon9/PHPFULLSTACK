@@ -1,0 +1,52 @@
+html {
+    font-family: '굴림', '바탕';
+    font-size:10px;
+    }
+
+.p1{
+    font-size: medium;
+}
+/* medium - default로 설정된 값 */
+
+.p2 {
+    font-size : xx-small;
+}
+
+.p3 {
+    font-size: xx-large;
+}
+/* 키워드는 몇 픽셀인지 파악하기 힘들어서 잘 사용하지 않음. */
+.p1_px{
+    font-size : 20px;
+}
+
+div{
+    font-size:16px;
+}
+
+.p2_em{
+    font-size : 5em;
+}
+
+.p3_rem{
+    font-size : 5rem;
+}
+
+.p1_weight{
+    font-weight: 100;
+}
+
+.p2_weight{
+    font-weight: 400;
+}
+
+.p3_weight{
+    font-weight: 900;
+}
+
+
+
+/* em : 부모 요소에서 지정한 글꼴의 대문자 M의 너비를 기준으로 한후 비율값으로 지정
+    rem : 최상위 요소(문서 시작 부분)에서 지정한 크기를 기준으로한 후 비율값을 지정.  
+    pc외에 모바일, 태블릿 등 새로운 기기들로 브라우저를 많이 보기 시작하면서
+    px로 크기는 최상위요소의 기본값만 지정하고 다른 경우에는 em,rem의 사용빈도가 높아짐*/

@@ -1,0 +1,60 @@
+/* h1 {
+    color : red !important;
+    
+    }
+
+.h1-1{
+    color : orange;
+}
+
+#h1-id {
+    color : black;
+} */
+
+/* 
+
+h1 {
+    color : red ;
+    }
+
+h1 {
+    color : orange;
+    } */
+
+/* .container_2{
+    color: blue ;
+    }
+.h1_2{
+    color:orange;
+    } */
+
+    
+    h1{
+        color:brown;
+    }
+    .container h1{
+        color:red;
+    }
+
+
+    /* h1{
+        color:brown;
+    } 
+
+    .container{
+        color:red !important;
+    }  */
+    
+    /* important는 내가 지정한 요소에만 지정되기 때문에 
+        h1에 이미 요소를 지정했기 때문에 
+        container에 important를 지정해도 적용되지 않음. */
+
+    
+    /* h1{
+        color:brown;
+    }
+    .container{
+        color:red;
+    } 
+    .h1_1{
+        color:red;} */

@@ -1,0 +1,19 @@
+table{
+    border: 1px solid #000;
+    border-collapse: separate;
+    caption-side: bottom;
+    border-spacing: 10px 5px;
+    /* 좌우 여백, 상하여백 */
+    }
+
+/* border-collapse
+    separate:표와 칸이 떨어져 있음(기본값)
+    collapse:table과 칸들이 붙어져있음 */
+
+/* table에 caption-side
+            top : 위(기본값)
+            bottom : 아래로 이동 */
+
+th,td{
+    border : 1px dotted #000;
+    }

@@ -1,0 +1,48 @@
+#container1{
+    
+    width:550px;
+    height:620px;
+    
+}
+#box1{
+    background-color: #808080;
+    }
+h1 {
+    color:#fff;
+}
+.information{
+    color : #ffa600 ;
+}
+
+#container2{
+    border:1px solid #000;
+}
+h2{
+    color: #ff0000;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+.text{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.accent{
+    color : #0000ff
+}
+.smalltext{
+    font-size:0.7em;
+}
+
+#check{
+    background-color: #000;
+    color: #fff;
+    
+    padding:10px;
+}
+
+
+

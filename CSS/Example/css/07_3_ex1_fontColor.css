@@ -1,0 +1,15 @@
+/* h1 {
+    color: rgb(69,128,113);
+} */
+
+/*HEX : #458071 */
+/* h1 {
+    color: rgba(69,128,113, 0.5);
+} */
+/* rgba 마지막 alpha는 투명도 0~1
+    1이 기본값 0으로 갈수록 투명 */
+
+    h1 {
+        color : hsla(4,98%,49%);
+    }
+    /* hue : 색깔 /saturation : 채도/ lightness: 명도 */
