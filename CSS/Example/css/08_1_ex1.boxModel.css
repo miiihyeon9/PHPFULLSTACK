@@ -1,0 +1,39 @@
+.content-box {
+    background-color: #808080;
+    margin: 10px;
+    padding: 20px;
+    border: 3px solid #ff0000;
+    width: 200px;
+    height:50px;
+    text-align: center;
+    box-sizing: content-box;
+    /* content의 너비가 200/50이고 
+    나머지 padding,margin값이  따로 더해짐*/
+    
+}
+
+.border-box {
+    background-color: #808080;
+    margin: 10px;
+    padding: 20px;
+    border: 3px solid #ff0000;
+    width: 200px;
+    height:50px;
+    text-align: center;
+    box-sizing: border-box;
+    /* width와 height가 box전체로 계산됨.  */
+}
+
+span{
+    background-color: aqua;
+}
+
+/* content padding border margin
+     */
+
+/* box-sizing
+    border-box : 테두리까지 포함한 너빗값
+    content-box : 콘텐츠 영역만 너빗값 지정(기본값) 
+    */
+
+/* border 박스를 많이 사용함 */
