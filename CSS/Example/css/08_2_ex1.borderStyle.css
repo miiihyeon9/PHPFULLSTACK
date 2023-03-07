@@ -41,4 +41,4 @@ img{
     box-shadow: 5px 5px 30px 2px #000;
     
 }
-
+/* 완전한 원 모양은 border-radius를 50%하면 됨.  */

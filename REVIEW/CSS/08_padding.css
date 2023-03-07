@@ -1,0 +1,45 @@
+#container{
+    width:560px;
+    margin: 0 auto;
+    
+}
+#description{
+    border: 1px dotted #000;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0 20px;
+}
+
+#receipe{
+    border: 1px dotted #000;
+    margin: 15px 0;
+    padding : 0 20px;
+}
+.accent{
+    font-weight: 900;
+}
+ul{
+    list-style: decimal;
+}
+
+#package{
+    border: 1px dotted #000;
+    border-left-style: solid;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0 20px;
+    
+}
+table,th,td{
+    border:1px dashed #818080;
+    border-collapse: collapse;
+    padding:10px 20px;
+    margin : 20px;
+    width:450px;
+}
+.tableColor{
+    background-color: #ccc;
+}
+td{
+    text-align: center;
+}

@@ -6,7 +6,7 @@
     width: 200px;
     height:50px;
     text-align: center;
-    box-sizing: content-box;
+    box-sizing: border-box;
     /* content의 너비가 200/50이고 
     나머지 padding,margin값이  따로 더해짐*/
     
