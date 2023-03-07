@@ -1,0 +1,44 @@
+.div_border{
+    
+    border: 2px solid #000;
+    
+}
+.div_none{
+    
+    border-style: none;
+}
+
+/* 자바스크립트를 사용하여 화면에서 사라지게 하거나 변경할 수 있음 */
+
+.div_solid{
+    border-style: solid;
+    border-width: 10px 5px 3px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 10px;
+}
+
+.div_dotted{
+    border-style: dotted;
+}
+
+.div_dashed{
+    border-style: dashed;
+    border-color: #c3ce33;
+    border-radius : 2em;
+    
+}
+
+.div_double{
+    border-style:double;
+}
+
+
+img{
+    width: 200px;
+    height: 200px;
+    border:1px solid #ccc;
+    border-radius: 50%;
+    box-shadow: 5px 5px 30px 2px #000;
+    
+}
+

@@ -1,0 +1,16 @@
+ul{
+    list-style-type: none;
+}
+
+li{
+    display:inline;
+    background-color: #ccc;
+    padding: 10px 20px;
+    float: left;
+    
+}
+a{
+    text-decoration-line: none;
+    color:#000;
+}
+

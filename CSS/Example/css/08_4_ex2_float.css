@@ -1,0 +1,17 @@
+p {
+    font-size: 25px;
+    
+}
+
+img{
+    float:left;
+}
+/* float:left right */
+
+.p_2{
+    clear:left;
+}
+
+/* clear: left, right, both
+    float를 해제하겠다~ 
+    */

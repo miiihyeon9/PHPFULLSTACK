@@ -25,8 +25,17 @@
 }
 
 span{
-    background-color: aqua;
+    background-color: #00ffff;
+    padding:10px;
 }
+
+.div_3{
+    display: inline-block;
+    box-shadow: 10px 10px 5px 5px #000 ;
+    border : 2px solid #000;
+    border-radius: 10px;
+}
+/* inset : 그림자가 안쪽으로 들어감  */
 
 /* content padding border margin
      */

@@ -1,0 +1,38 @@
+/* .art_1{
+    border : 3px solid red;
+    display : none;
+} */
+
+/* display:none 
+    소스코드에는 남아있지만
+    영역이 사라지게 됨..  */
+
+/* .div_2{
+    border : 3px solid orange;
+}
+
+span{
+    display:inline-block;
+} */
+
+
+
+
+div{
+    border:3px solid orange;
+}
+
+span{
+    border:3px solid green;
+}
+
+.art_2>div,
+.art_2>span{
+    display: inline-block;
+    }
+
+.wh{width:200px;
+    height:200px;}
+/* width height는 블럭레벨요소에만 줄 수 있음.!!!!!
+    inline요소에는 width와 height을 넣어도 적용되지 않음. 
+     */

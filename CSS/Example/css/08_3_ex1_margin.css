@@ -1,0 +1,16 @@
+.container_1{
+    border : 3px solid #000;
+    margin : 10px 20px 30px;
+    
+}
+
+
+.container_2{
+    border : 3px solid #000;
+    margin : 20px;
+    
+}
+/* 마진 중첩 : 서로 만나면 큰 쪽으로 겹쳐지는 문제
+    세로로 배열 되었을 때 생기는 경우.
+    가로는 마진이 중첩되지 않기 때문에
+    세로로 배치할 때 염두하고 해야함! */

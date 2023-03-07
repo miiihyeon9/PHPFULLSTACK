@@ -1,0 +1,64 @@
+#container{
+    width: 560px;
+    margin: 0 auto;
+}
+
+/* container로 지정해주지 않으면
+    안에 있는 태그들이 body에 속하게 됨 
+    ->body가 최상위 요소가 됨. */
+
+#description{
+    border : 1px dotted #000;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding : 20px}
+
+.accent{
+    font-weight: 900;
+}
+
+.itali{
+    font-style: italic;
+}
+
+#receipe{
+    border : 1px dotted #000;
+    margin: 15px 0px;
+    padding: 20px;
+}
+
+ul{
+    list-style :decimal ;
+}
+/* list-style-type : decimal; */
+
+#package{
+    border : 1px dotted #000;
+    border-left-style: solid;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding:20px;
+}
+
+table, th, td{
+    border: 1px dashed #888585a9;
+    border-collapse: collapse;
+    padding: 10px 5px;
+}
+
+table {
+    width:500px;
+}
+
+.tableColor{
+    background-color: #ccc;
+    text-align: center;
+}
+
+.countPrice{
+    padding-left: 30px;
+}
+
+.weight{
+    text-align: center;
+}

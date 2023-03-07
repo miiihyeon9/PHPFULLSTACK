@@ -7,7 +7,7 @@ img {
     width:550px;
     height:400px;
     object-fit:cover;
-
+    position:relative;
 }
 
 .introduce {
@@ -33,7 +33,7 @@ h1 {
     border: 1px dashed #ccc;
 }
 
-#check {
+.check {
     background-color: #000;
     color:#fff;
     padding: 3px 10px;
