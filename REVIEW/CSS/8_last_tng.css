@@ -1,0 +1,63 @@
+#container{
+    width:800px;
+    margin:0 auto;
+}
+
+article{
+    width:350px;
+    height: 200px;
+    margin: 10px;
+    padding:10px;
+    border:1px dashed #ccc;
+}
+footer{
+    width:800px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    line-height: 3em;
+}
+p{
+    font-size: 0.75em;
+    line-height: 1.5em;
+}
+main{
+    position:relative;
+    width:780px;
+    height:480px;
+    
+}
+/* .dogHouse{
+    position:absolute;
+    top:0;
+} */
+/* .dogEat{
+    position:absolute;
+    right: 0;
+    top:0;
+}
+.dogWater{
+    position:absolute;
+    bottom: 0;
+}
+.dogNametag{
+    position:absolute;
+    bottom:0;
+    right: 0;
+} */
+
+.dogEat,.dogNametag, .dogWater,.dogHouse{
+    position:absolute;
+}
+.dogEat{
+    right:0;
+    top:0;
+}
+.dogWater{
+    bottom:0;
+}
+.dogNametag{ 
+    position: absolute;
+    bottom:0;
+    right:0;
+}

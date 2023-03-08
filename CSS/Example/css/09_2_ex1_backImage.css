@@ -26,6 +26,7 @@
 .div_position{
     border:1px solid #000;
     background-image: url('../img/289image.PNG');
+    /* 백그라운드에 배경색을 설정해도 이미지를 따로 불러서 지정할 수 있음  */
     width:500px;
     height:500px;
     background-repeat: no-repeat;
