@@ -3,7 +3,7 @@ ul{
 }
 
 li{
-    display:inline;
+    display:inline-block;
     background-color: #ccc;
     padding: 10px 20px;
     float: left;

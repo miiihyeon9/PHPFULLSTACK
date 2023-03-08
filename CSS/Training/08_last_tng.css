@@ -1,0 +1,29 @@
+#container{
+    width:800px;
+    margin:0 auto;
+}
+/* auto 남아있는 여백을 자동으로 줄여줌 */
+article{
+    width:350px;
+    height:200px;
+    border: 1px dashed #ccc;
+    margin:10px;
+    float:left;
+    padding:10px;
+}
+p{
+    font-size: 0.75em;
+    line-height: 20px;
+}
+footer{
+    clear: left;
+    text-align: center;
+    background-color: #000;
+    padding: 10px 0px;
+    color:#fff;
+    width:800px;
+    /* padding대신 
+        line-height 사용해도됨 */
+}
+
+/* position활용해서 해보기 */

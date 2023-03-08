@@ -1,0 +1,18 @@
+body{
+
+    background : url('../Example/img/289image.PNG');
+    color : white;
+    margin : 0;
+    
+}
+
+
+.box{
+    background-color: gray;
+    background-attachment: fixed;
+    padding:20px;
+}
+
+p{width:650px;}
+/* 개발자도구 활용해서 margin, padding 찾아보기
+ */

@@ -1,0 +1,36 @@
+section{
+    width:700px;
+    height: 700px;
+    border:1px solid #000;
+    position:relative;
+}
+#static{
+    width:400px;
+    height:200px;
+    border:1px solid #000;
+    
+}
+#relative_1{
+    width:400px;
+    height:200px;
+    border:1px solid #000;
+    position:relative;
+    top:10px;
+    left:10px;
+}
+#relative_2{
+    width:400px;
+    height:200px;
+    border:1px solid #000;
+    position:relative;
+    left:100px;
+    top:-50px;
+}
+#fixed{
+    width:100px;
+    height:100px;
+    background-color: #000;
+    right: 30px;
+    top:30px;
+    position:fixed;
+}

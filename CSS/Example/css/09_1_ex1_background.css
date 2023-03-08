@@ -1,0 +1,13 @@
+h1{
+    background-color: #ff0000;
+    border: 10px dashed black;
+    width:200px;
+    height:100px;
+    padding:10px;
+    background-clip :content-box;
+
+}
+/* background-clip
+        border-box : border부분까지 background가 들어감(기본값)
+        content-box :content부분에만 background가 들어감
+        padding-box :padding영역까지 background가 들어감 */

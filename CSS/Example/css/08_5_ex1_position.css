@@ -1,0 +1,54 @@
+main,section,article{
+    padding:20px;
+}
+
+main{
+    background-color : yellow;
+    height:1200px;
+}
+section{
+    background-color : aqua;
+    /* position:relative; */
+}
+article{
+    background-color : blue;
+    
+}
+.div_static{
+    background-color : gray;
+}
+.div_relative{
+    background-color : beige;
+    /* position : relative;
+    bottom : 30px;
+    right : 30px; */
+}
+/* relative: 원래 있던 자리에서 이동 
+    top,bottom,left,right는 기준점!*/
+.div_absolute{
+    background-color: yellowgreen;
+    position: absolute;
+    top:30px;
+}
+/* absolute는 부모요소를 설정안했을 때 기준점 ->body
+absolute는 relative속성값을 준 영역을 기준으로 움직임. 
+-> absolute를 사용하기 위해서는 상위요소에 relative를 설정해주어야 함
+상위요소 : 내가 속해 있는 위에 요소 */
+
+.div_fixed{
+    background-color: violet;
+    position:fixed;
+    right:50px;
+    bottom:50px;
+}
+/* fixed - viewport를 기준으로  
+    %,em가능 */
+
+.div_sticky{
+    background-color: tomato;
+    position:sticky;
+    top:0px;
+}
+/* sticky - 상단 고정
+    바로 위 부모요소가 있어야 함. 
+      */

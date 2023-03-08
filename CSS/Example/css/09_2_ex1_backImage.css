@@ -1,0 +1,72 @@
+/* .div_img{
+    background-image: url("../img/289image.PNG"),url("../img/cat.PNG");
+    width: 500px;
+    height: 500px;
+    
+    
+    
+} */
+
+/* .div_repeat{
+    background-image: url('../img/289image.PNG');
+    width:500px;
+    height:500px;
+    background-repeat: repeat-x ;
+} */
+/*url을 작성할때 '', "" 표시 해줘야 함.  
+사용하지 않으면 파일에 특수문자나 띄어쓰기 할 경우에 에러가 날 수 있음
+배경도 폰트와 비슷하게 앞에 있는 사진이 작동을 안하게 되면
+뒤에 설정해둔 사진이 자동으로 나오게 됨.(최대 3개) */
+
+/* body{
+    background-image: url('../img/cat.PNG');
+    
+} */
+
+.div_position{
+    border:1px solid #000;
+    background-image: url('../img/289image.PNG');
+    width:500px;
+    height:500px;
+    background-repeat: no-repeat;
+    /* background-position: bottom 30px right 50px; */
+    background-size: contain;
+}
+
+
+.height{
+    height:500px;
+}
+.at_img{
+    width:150px;
+    height:200px;
+    background-image: url('../img/289image.PNG');
+    border:1px solid #000;
+    display: inline-block;
+    overflow: scroll;
+    /* 글씨가 칸을 넘었을 때 사용*/
+    color: #fff;
+}
+
+.div_im_scroll{
+    background-attachment: scroll;
+}
+.div_im_fixed{
+    background-attachment:fixed;
+}
+.div_im_local{
+    background-attachment: local ;
+}
+
+/* background-position : 10% 75%
+    -> 왼쪽으로 10% 탑에서 75% */
+/* background-size 
+    auto : 원본 그대로
+    px : width값으로 맞춰주고 height은 그 비율에 맞게 설정됨
+    cover : 배경 이미지로 요소를 모두 덮도록 이미지 확대, 축소
+    contain : 요소 안에 배경 이미지가 다 들어오도록 이미지를 확대 축소*/
+
+    /* li{
+    list-style:url('../img/cat.PNG');
+}
+ */
