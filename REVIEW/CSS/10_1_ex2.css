@@ -1,0 +1,48 @@
+body{
+    background-color: #ccc;
+}
+#container{
+    width:700px;
+    height: 700px;
+    margin:0 auto;
+    background-color: #fff;
+    border:2px solid #000;
+}
+fieldset{
+    width: 600px;
+    margin:30px auto;
+    position:relative;
+    border: 1px dashed #000;
+    
+}
+
+fieldset input{
+    position:absolute;
+    right: 200px;
+    
+}
+
+.logInInformation{
+    margin: 30px;
+}
+#grade::placeholder{
+    color:#000;
+}
+
+.privacy{
+    margin:30px;
+}
+
+#submitButton{
+    border: 1px dashed #000;
+    text-align: center;
+    margin: 0 auto;
+    width:625px;
+}
+
+button{
+    width:100px;
+    padding:10px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
