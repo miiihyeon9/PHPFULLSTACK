@@ -1,0 +1,83 @@
+body{
+    margin:0;
+    padding:0;
+}
+/* 기본으로 넣어주고 시작함.  */
+fieldset{
+    background-image: url('./picture.jpg');
+    background-size: cover;
+    width:500px;
+    height:400px;
+    margin:0 auto;
+    position:relative;
+}
+
+legend{
+    font-size: 40px;
+    color:blanchedalmond;
+    font-weight: 900;
+}
+
+div{
+    margin:20px 0px;
+}
+
+label{
+    font-weight: 900;
+}
+input{
+    background-color :transparent ;
+    border: 1px solid #000;
+}
+button{
+    position:absolute;
+    left:10px;
+    bottom:10px;
+}
+.beforeText::before{
+    content:'*';
+    color:red;
+}
+
+input:focus{
+    border:3px solid orange;
+    outline:none;
+}
+
+
+textarea{
+    background-color :transparent ;
+    padding : 0;
+    border: 1px dotted #ccc;
+    position:fixed;
+    margin:0 10px;
+}
+/* vertical-align 사용해서 해보기 */
+
+textarea:focus{
+    border:3px solid orange;
+    outline:none;
+}
+/* class로 묶어서 */
+
+input[type="radio"]:checked + label {color: red;}
+
+.buttonAlarm{
+    display:none;
+    background-color: black;
+    color:#fff;
+}
+
+button:hover+.buttonAlarm{
+    display:inline-block;
+    position: absolute;
+    left: 65px;
+    bottom:10px;
+    margin:0;
+    
+}
+
+/* vertical */
+
+
+/* .div label { vertical-align}: top*/

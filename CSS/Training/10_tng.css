@@ -1,0 +1,44 @@
+.menu{
+    width:605px;
+    margin:0 auto;
+}
+
+ul{
+    display: inline-block;
+    list-style: none;
+    width: 605px;
+    box-shadow: 10px 10px 15px -10px #111 ;
+    padding: 0;
+}
+
+a{  
+    width:100px;
+    background-color: #ccc;
+    border-right:1px solid #000;
+    padding:10px 0;
+    float:left;
+    text-decoration: none;
+    color:#000;
+    text-align: center;
+    
+} 
+
+
+a:hover{
+    background-color: #555;
+    color:#fff;
+}
+
+
+.menu_6:hover{
+    background-color:#b30000;
+    color:#fff;
+}
+
+.menu_6{
+    border-right:none;
+}
+
+
+
+
