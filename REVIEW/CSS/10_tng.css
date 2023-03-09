@@ -1,0 +1,33 @@
+body{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style: none;
+    width:605px;
+    padding:0;
+    margin:10px auto;
+    
+    box-shadow: 10px 10px 15px -10px #111 ;
+}
+a{
+    border-right: 1px solid #000;
+    background-color: #ccc;
+    float:left;
+    width:100px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.menu_6{
+    border:none;
+}
+a:hover{
+    background-color: #555;
+    color:white;
+}
+.menu_6:hover{
+    background-color: crimson;
+    color:#fff;
+}

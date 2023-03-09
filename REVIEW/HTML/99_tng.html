@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/99_tng.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>I want YOU!</legend>
+            <nav>
+                <ul>
+                    <li>
+                        <label for="name" class="beforeText ">이름</label>
+                        <input type="text" required id="name" name="name" class="transparent">
+                    </li>
+                    <li>
+                        <label for="age" class="beforeText">나이</label>
+                        <input type="number" name="age" id="age" required min="20" class="transparent">
+                    </li>
+                    <li>
+                        <label for="gender" class="beforeText">성별</label>
+                        <input type="radio" name="gender" id="male" required>
+                        <label for="male">남자</label>
+                        <input type="radio" name="gender" id="female" required>
+                        <label for="female">여자</label>
+                    </li>
+                </ul>
+            </nav>
+            <label for="request">요청사항</label>
+            <textarea name="request" id="request" cols="30" rows="10" class="transparent" placeholder="요청사항 입력"></textarea>
+            <br>
+            <button>보내기</button>
+            <div>내용을 다시 한 번 확인해 주세요.</div>
+        </fieldset>
+    </form>
+</body>
+</html>
+<!-- vertical-align 사용해보기
+    class 활용 잘 해보기-->

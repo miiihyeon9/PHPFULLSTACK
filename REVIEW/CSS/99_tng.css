@@ -1,0 +1,63 @@
+body{
+    margin:0;
+    padding:0;
+}
+fieldset{
+    width:600px;
+    height: 500px;
+    margin:0 auto;
+    background-image: url('../images/camera.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+}
+legend{
+    font-size: 40px;
+    font-weight: 900;
+    color:rgba(87, 87, 87, 0.982);
+}
+ul{
+    list-style: none;
+}
+li{
+    margin:20px 0;
+}
+label{
+    font-weight: 900;
+    font-size:1.3em;
+}
+.beforeText::before{
+    content:'*';
+    color:red;
+}
+.transparent{
+    background-color: transparent;
+    border: 1px solid #000;
+}
+[for=request]{
+    vertical-align: top;
+}
+.transparent:focus{
+    outline: none;
+    border:2px solid gray;
+}
+fieldset>div{
+    display:none;
+}
+button{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    
+
+}
+
+button:hover+div{
+    display:inline;
+    left:70px;
+    bottom:10px;
+    position:absolute;
+    background-color: black;
+    color:white;
+}
+input[type="radio"]:checked + label {color: red;}
