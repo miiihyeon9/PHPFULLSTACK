@@ -1,0 +1,60 @@
+/* container에 지정해 줄 수 있는 속성들 
+    display
+    flex-direction
+    flex-wrap
+    flex-flow
+    justify-content
+    align-items
+    align-content */
+
+/* item에 지정해 줄 수 있는 속성들
+    order
+    flex-grow
+    flex-shrink
+    flex
+    align-self */
+body{
+    margin:0;
+    padding:0;
+}
+.container{
+    width:100vw;
+    height:100vh;
+    background-color: beige;
+    display:flex;
+    /* justify-content:space-between;
+    align-items:flex-end; */
+}
+.flexbox{
+    width:10vw;
+    height: 10vh;
+    border: 2px solid crimson;
+}
+.item1{
+    background-color: red;
+    flex-grow: 1;
+}
+.item2{
+    background-color: orange;
+    flex-grow: 1;
+}
+.item3{
+    background-color: yellow;
+    flex-grow: 1;
+    /* flex-grow와
+        flex-shrink는 컨테이너의 크기 조절해줌
+        flex-grow는 화면을 축소, 확대 할 때 얼마나 flex-grow를 준 다른 것 들보다크기를 유지하냐~
+        flex-shrink는 화면을 축소했을 때 flow-shrink를 준 다른 것들 보다 얼마나 크기가 작아지냐~  
+        flex-basis: 아이템들이 얼마나 공간을 차지하냐
+        align-self: 아이템별로 아이템을 정렬*/
+}
+.item4{
+    background-color: green;
+}
+.item5{
+    background-color: blue;
+}
+.item6{
+    background-color: navy;
+    
+}
