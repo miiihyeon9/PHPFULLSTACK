@@ -1,0 +1,12 @@
+@import url('./12_2_ex2_mediaQuery.css') only screen and (max-width:700px);
+@import url('./12_2_ex3_mediaquery.css') only screen and (min-width:701px) and (max-width:900px);
+@import url('./12_2_ex4_mediaQuery.css') only screen and (min-width:901px);
+
+
+
+
+
+/* max-width:900px =>까지 이 스타일ㅇ을 주겠다~ 
+    min-width:900px =>최소 이 픽셀부터는 이 스타일을 적용하겠다.*/
+/* 
+link:css해서 다 연결해주는 방법도 있음  */

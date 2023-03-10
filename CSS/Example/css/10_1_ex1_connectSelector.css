@@ -9,3 +9,20 @@ header p{
     height: 200px;
     border:1px solid black;
 }
+
+/* 자식 선택자 : 자식요소에만 적용하는 선택자 */
+main>div{
+    width:200px;
+    border:1px solid #000;
+}
+
+/* 인접 형제 선택자 : 형제 요소중 첫 번째 동생 요소만 선택하는 것 */
+h1+p{
+    box-shadow: 10px 10px 10px 10px #000;}
+
+
+/* 형제 선택자 : 모든 형제 요소에 적용 */
+h1~p{
+    background-color: blue;
+}
+

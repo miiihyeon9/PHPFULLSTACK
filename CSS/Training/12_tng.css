@@ -1,0 +1,55 @@
+body{
+    margin:0;
+    padding:0;
+}
+#container{
+    display:flex;
+    width:600px;
+    flex-direction: row;
+}
+
+.border{
+    border:1px solid #000;
+    margin:0 auto;
+    box-sizing:border-box;
+}
+.wiki{
+    width:600px;
+    height:100px;
+}
+.comunication{
+    width:350px;
+    height: 200px;
+}
+.catle{
+    width:200px;
+    height:300px;
+}
+.help{
+    width:350px;
+    height: 350px;
+}
+.news{
+    width:200px;
+    height:300px;
+}
+.introduce{
+    width:350px;
+    height:100px;
+}
+.art{
+    width:350px;
+    height:300px;
+}
+.history{
+    width:200px;
+    height:200px;
+}
+.know{
+    width:200px;
+    height:400px;
+}
+.history{
+    width:600px;
+    height:200px;
+}

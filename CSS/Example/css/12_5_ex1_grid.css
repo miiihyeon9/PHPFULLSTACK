@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+/* .grid_container{
+    background-color: beige;
+    display: grid;
+    width:50vw;
+    height: 50vh; */
+    /* grid-template-columns:100px 100px 100px;
+    => 100px만큼 width값을 가진 열을 3개 만들겠다 */
+    /* grid-template-columns: 1fr 1fr 1fr ;
+    => 1: 1: 1 로 열을 3개 만들거야~ */
+    /* grid-template-columns: repeat(auto-fit,100px); */
+    /* =>3열을 1:1:1로 만들거야~ */
+    /* grid-template-rows:minmax(100px,200px) minmax(100px,200px); */
+    /* grid-template-rows: repeat(); */
+    
+/* } */
+.grid_item{
+    background-color: aqua;
+}
+.grid_item:nth-child(odd){
+    background-color: darkkhaki;
+}
+.grid_container{
+    background-color: beige;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(200,1fr));
+    grid-template-rows: 1fr 1fr ;
+    grid-gap: 10px 20px;
+    
+}
+.grid_item_1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+.grid_item_4{
+    grid-row:2/3;
+    /* start / end */
+}
