@@ -9,7 +9,7 @@ fieldset{
     background-image: url('../images/camera.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    position:relative;
+    /* position:relative; */
 }
 legend{
     font-size: 40px;
@@ -45,19 +45,29 @@ fieldset>div{
     display:none;
 }
 button{
-    position:absolute;
+    /* position:absolute;
     bottom:10px;
-    left:10px;
-    
+    left:10px; */
+    position: relative;
+    top:80px;
 
 }
 
-button:hover+div{
+button:hover::after{
+    content : '내용을 다시 한 번 확인해 주세요.';
+    background-color: black;
+    color:white;
+    width:300px;
+    font-size:20px;
+    position:absolute;
+    left:56px;
+}
+/* button:hover+div{
     display:inline;
     left:70px;
     bottom:10px;
     position:absolute;
     background-color: black;
     color:white;
-}
+} */
 input[type="radio"]:checked + label {color: red;}
