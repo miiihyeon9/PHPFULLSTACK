@@ -1,0 +1,143 @@
+html{
+    scroll-behavior:smooth;
+}
+body{
+    margin:0;
+    padding: 0;
+    color:white;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    background-color: goldenrod;
+    border-radius: 5px;
+    padding:10px;
+}
+
+.hero{
+    /* width:100vw;
+    min-height: 30vh;
+    max-height: 50vh; */
+    /* height:30vh; */
+    
+    /* display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 60px 30px;
+    justify-content: space-between; */
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-rows: minmax(200px,auto);
+    grid-gap: 10px;
+    box-sizing: border-box;
+    padding: 60px 30px;
+    
+    align-items: center;
+    
+}
+
+
+
+section{
+    background-size: cover;
+}
+
+h1{ 
+    /* display:inline-block; */
+    /* width:70vw; */
+    font-size:3em;
+    /* height: 8vh; */
+}
+
+/* h1+article{
+    width:40vw;
+    margin:10px;
+} */
+
+article{
+    position:relative;
+}
+article>p{
+    color:white;
+    padding:0;
+    
+    font-size: 1.2em;
+    width: 60vw;
+}
+
+article>a{
+    position:absolute;
+    bottom:-60px;
+    margin:20px;
+}
+
+ul{ 
+    list-style: none;
+        display:flex;
+        flex-flow:row wrap;
+        justify-content: center;
+}
+figure{
+    position: relative;
+    width:250px;
+    height: 200px;
+    margin: 10px auto;
+
+}
+figcaption{
+    position:absolute;
+    width:230px;
+    background-color: rgba(0, 0, 0, 0.80);
+    padding:10px;
+    bottom : 0;
+}
+
+img{
+    width:250px;
+    height:200px;
+    border-radius: 5px;
+}
+
+
+
+li{
+    border:1px solid #ccc;
+    border-radius: 5px;
+    width:300px;
+    height: 400px;
+    position:relative;
+    margin:10px;
+}
+
+li>a{
+    position:absolute;
+    left:10px;
+    bottom:10px;
+}
+
+
+p{
+    color:black;
+    margin:20px;
+}
+
+footer>p{
+    color:white;
+    padding: 20px;
+    margin:0;
+    bottom: 0;
+    position:fixed;
+    background-color: black;
+    width:100vw;
+    text-align: center;
+}
+
+a:hover{
+    background-color: rgba(218, 165, 32,50%);
+}
+
+
+/* 그림 크기 변화됨.
+box-sizing: border-box; 그림에 사용해보기*/
