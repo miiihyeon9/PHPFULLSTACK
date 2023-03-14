@@ -4,6 +4,8 @@
 	FROM [테이블명]
 	WHERE [쿼리 조건]
 	GROUP BY [컬럼명] HAVING [집계함수 조건]
+		
+
 	ORDER BY [컬럼명 ASC || 컬럼명 DESC]
 	;
 
@@ -41,12 +43,12 @@
 		WHERE emp_no <= 10005;
 	
 	- AND, OR로 여러 조건을 설정하여 조회
-		SELECT *
+		SELECT *(교집합 느낌)
 		FROM employees
-		WHERE emp_no <= 10001
+		WHERE emp_no >= 10001
 		  AND emp_no <= 10005;
 
-		SELECT *
+		SELECT *(합집합 느낌)
 		FROM employees
 		WHERE emp_no <= 10003
 		   OR emp_no >= 499997;
@@ -81,7 +83,7 @@
 			WHERE first_name like( 'Georg_' );
 
 	- ORDER BY로 정렬하여 조회
-		> ASC : 오름차순으로 정렬합니다.
+		> ASC : 오름차순으로 정렬합니다.( 디폴트값)
 			SELECT *
 			FROM employees
 			ORDER BY emp_no ASC;
@@ -94,6 +96,9 @@
 		SELECT DISTINCT dept_no
 		FROM dept_manager;
 	
+	recode단위로 중복되는 걸 제외시켜줌. 
+
+
 	- LIMIT로 출력 개수를 제한하여 조회
 		SELECT *
 		FROM employees
@@ -111,35 +116,35 @@
 					SELECT dept_no 
 					FROM dept_manager
 					WHERE emp_no = 110114
-				  );
+				);
 
 4. ANY / ALL
 	- 서브쿼리의 결과가 2개 이상이라 에러가 납니다. **
 		SELECT *
 		FROM dept_manager
 		WHERE dept_no = (
-						  SELECT dept_no 
-						  FROM dept_manager
-						  WHERE dept_no = 'd002'
-					    );
+						SELECT dept_no 
+						FROM dept_manager
+						WHERE dept_no = 'd002'
+						);
 
 	- ANY를 사용하면 2개 이상의 결과 중 하나라도 만족하는 데이터를 조회합니다.
 		SELECT *
 		FROM dept_manager
 		WHERE dept_no = ANY (
-							  SELECT dept_no 
-							  FROM dept_manager
-							  WHERE dept_no = 'd002'
-						    );
+							SELECT dept_no 
+							FROM dept_manager
+							WHERE dept_no = 'd002'
+							);
 
 	- ALL을 사용하면 2개 이상의 결과 모두를 만족하는 데이터를 조회합니다.
 		SELECT *
 		FROM dept_manager
 		WHERE dept_no = ALL (
-							  SELECT dept_no 
-							  FROM dept_manager
-							  WHERE dept_no = 'd002'
-					  	    );
+							SELECT dept_no 
+							FROM dept_manager
+							WHERE dept_no = 'd002'
+							);
 
 5. 집계 함수
 	- AVG(컬럼명) : 평균을 구합니다.
@@ -147,6 +152,9 @@
 	- MIN(컬럼명) : 최소값을 구합니다.
 	- COUNT(컬럼명) : 개수를 구합니다.
 
+count - > 검색된 recode의 개수 
+		select count(*)
+		from employees;
 6. 그룹으로 묶어서 조회 : GROUP BY 컬럼명 [ HAVING 집계함수조건 ]
 	SELECT dept_no, COUNT(emp_no) AS cnt
 	FROM dept_manager
