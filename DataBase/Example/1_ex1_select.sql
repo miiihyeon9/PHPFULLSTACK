@@ -193,4 +193,18 @@ WHERE emp_no IN (
 -- 뽑고 싶은 데이터를 먼저 생각해서 적어놓고 
 -- 만들어보기 
 
+-- 현재 월급이 70000이상 직급이 Senior Engineer
+-- 인 사원의 이름, 생일, 성별을 구하시오
 
+SELECT first_name, birth_date,gender
+FROM employees
+WHERE emp_no IN (
+			SELECT emp_no
+			FROM salaries
+			WHERE NOW( salary>= 70000)
+			AND 
+			(
+			SELECT title
+			FROM titles
+			WHERE title ='Senior Engineer');
+			
