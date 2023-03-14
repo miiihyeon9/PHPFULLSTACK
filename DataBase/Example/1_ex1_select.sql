@@ -82,7 +82,7 @@ HAVING avg_s BETWEEN 30000 AND 50000;
 SELECT CONCAT(last_name,' ',first_name) AS full_name
 FROM employees;
 
--- 날짜함수
+
 
 --서브쿼리 : 쿼리 안에 또 다른 쿼리가 있는 형태
 
@@ -161,7 +161,7 @@ WHERE emp_no IN  (
 -- int 라서 '' 사용하면 안됨.
 -- 자동형변환 조심해야함
 
-
+-- 날짜함수
 -- date 타입의 속성 비교 방법
 SELECT *, NOW()
 FROM titles

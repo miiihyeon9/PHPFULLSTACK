@@ -130,3 +130,15 @@ emp_no
 FROM titles
 WHERE title LIKE('%Engineer%');
 
+
+
+
+
+programs filex> mariaDB 10.5 > data > my.ini 
+autocommit=0
+시작> 서비스 클릭해서 mariaDB 다시시작
+
+
+
+github 
+origin- git한 시점
