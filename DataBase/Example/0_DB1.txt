@@ -45,6 +45,9 @@
 		관계형 데이터베이스의 구조를 정의하는데 사용합니다.
 	- DML (Data Manipulation Language, 데이터 조작 언어) : 
 		데이터베이스를 조작(검색, 등록, 삭제, 갱신)을 하기 위해 사용합니다.
+
+	select, insert, delete, update
+
 	- DCL (Data Control Language, 데이터 제어 언어) : 
 		데이터베이스에서 데이터에 대한 액세스를 제어하기 위해 사용합니다.
 		권한을 부여하는 언어
@@ -58,7 +61,7 @@
 		> 파일 다운로드 및 압축해제 : https://github.com/ByungjooPark/PHPFULLSTACK.git 
 			* DataBase > Sample > employees.zip
 		> cmd 관리자권한으로 실행
-		> "employees.sql"이 있는 디렉토리까지 이동 : cd 커멘드 이용
+		> "employees.sql"이 있는 디렉토리까지 이동 : cd 커멘드 이용	q
 		> mariaDB접속 : "mysql -u root -p" 입력 후 패스워드 입력해서 
 		> sql 실행 : "source employees.sql;" 입력
 		> employees DB 확인 : show database;

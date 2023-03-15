@@ -51,6 +51,9 @@ FROM salaries;
 
 -- 그룹으로 묶어서 조회
 -- GROUP BY 컬럼명 [HAVING] 직계함수 조건
+-- GROUP BY 명령은 하위 쿼리에서 ORDER BY와 동일한 기능을 수행하는 데 사용할 수 있습니다. 
+-- 둘 이상의 행을 반환하는 하위 쿼리는 IN 연산자와 같은 여러 값 연산자와 함께만 사용할 수 있습니다.
+
 SELECT title, COUNT(title)
 FROM titles
 GROUP BY title;
