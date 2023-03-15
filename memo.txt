@@ -23,6 +23,9 @@ git hub
 mariadb
 
 
+
+
+
 반디집 다운
 
 new root password
