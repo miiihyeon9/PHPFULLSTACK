@@ -73,7 +73,7 @@ FROM dept_emp;
 SELECT*
 FROM employees
 LIMIT 20 OFFSET 30;
--- 31부터 시작해서 20개만 출력
+-- 데이터 중 31번째 부터 시작해서 20개만 출력
 
 -- order by로 정렬해서 조회하기
 SELECT *

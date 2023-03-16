@@ -1,6 +1,7 @@
 -- 서브쿼리 : 쿼리안에 또 다른 쿼리가 있는 상태
 
--- ANY / ALL
+
+
 -- 	- 서브쿼리의 결과가 2개 이상이라 에러발생 
 SELECT *
 FROM dept_manager
@@ -36,7 +37,7 @@ WHERE dept_no = ALL (
 -- 여러 컬럼을 검색하는 서브 쿼리. 
 -- 비교 대상 컬럼과 1:1 대응이 되어야 함. 
 
-
+-- in 검색된 값중 하나만 일치하면 참
 SELECT *
 FROM employees
 WHERE emp_no in (
@@ -49,3 +50,15 @@ WHERE emp_no in (
 
 
 
+SELECT *
+from employees
+where emp_no in (
+				select emp_no
+				from titles
+				where title = 'Senior Engineer')
+			AND emp_no in (
+				SELECT emp_no
+				FROM salaries
+				where salary >= 70000);
+
+-- Senior Engineer이고 임금이 7만달러 이상인 사원의 정보 
