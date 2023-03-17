@@ -6,22 +6,22 @@ INNER JOIN
 (
 	SELECT A.emp_no
 	FROM (
-	SELECT emp_no
-	FROM titles
-	GROUP BY emp_no
-	HAVING COUNT(emp_no)>1
-	) A
-	WHERE A.emp_no NOT IN(
-	SELECT A.emp_no FROM titles A
-	INNER JOIN (
-		SELECT emp_no 
-		FROM titles 
+		SELECT emp_no
+		FROM titles
 		GROUP BY emp_no
 		HAVING COUNT(emp_no)>1
-		)B
-		ON A.emp_no = B.emp_no
-		WHERE to_date = DATE (99990101)
-		)
+		) A
+	WHERE A.emp_no NOT IN(
+		SELECT A.emp_no FROM titles A
+		INNER JOIN (
+			SELECT emp_no 
+			FROM titles 
+			GROUP BY emp_no
+			HAVING COUNT(emp_no)>1
+			)B
+			ON A.emp_no = B.emp_no
+			WHERE to_date = DATE (99990101)
+			)
 		
 	UNION 
 	
@@ -54,7 +54,7 @@ INNER JOIN (
 		FROM titles
 		GROUP BY emp_no
 	)
-)B
+		)B
 ON A.emp_no = B.emp_no
 GROUP BY A.gender;
 

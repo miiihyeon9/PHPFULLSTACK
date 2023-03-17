@@ -61,11 +61,11 @@ SELECT SUBSTRING_INDEX('ab.cd.ef.gh', '.', 2);
 
 
 -- 4. 수학 함수
--- 	CEILING(숫자) : 올림합니다.
+-- 	CEILING(숫자) : 올림 합니다.
 SELECT CEILING(1234.2);
--- 	FLOOR(숫자) : 내림합니다.
+-- 	FLOOR(숫자) : 버림 합니다.
 SELECT FLOOR(23.8);
--- 	ROUND(숫자) : 반올림합니다.
+-- 	ROUND(숫자) : 반올림 합니다.
 SELECT ROUND(456.5);
 -- 	TRUNCATE(숫자, 정수) : 소수점 기준으로 정수위치 까지 구하고 나머지는 버립니다.
 SELECT TRUNCATE(123.532,1);
