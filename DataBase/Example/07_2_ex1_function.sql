@@ -16,6 +16,7 @@ SELECT CONVERT (1234, CHAR(4));
 -- 	NULLIF(수식1, 수식2) : 수식1과 2가 같으면 NULL을 반환하고, 다르면 수식1을 반환합니다.
 -- 	CASE ~ WHEN ~ ELSE ~ END : 다중 분기를 위해 사용합니다.
 -- 		예)
+
 -- 			CASE 체크하려는 수식1
 -- 			WHEN 분기수식1 THEN 결과1
 -- 			WHEN 분기수식2 THEN 결과2
