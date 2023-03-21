@@ -8,6 +8,7 @@
 --  truncate로 데이터 초기화 하면 다시 1로 됨
 
 -- ORACLE은 CQL? 이라고 따로 있음 
+-- auto increment는 보통 숫자에 의미가 없는 경우에 사용
 
 -- 2. auto_increment 생성
 CREATE TABLE 테이블명 (
