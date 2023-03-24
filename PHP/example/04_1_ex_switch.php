@@ -4,11 +4,8 @@
 
 
 $val = 1;
-
-
-
     switch ($val) {
-        case $val == 1:
+        case 0:
             echo "숫자 0입니다.";
             break;
         case 1:

@@ -5,33 +5,33 @@
 // {
 //     반복하고 싶은 처리
 // }
-// $i=0;
-// while ($i<10)
-// {
-//     echo $i++;
-// }
+$i=0;
+while ($i<10)
+{
+    echo $i++;
+}
 
 
 
 // 2단 ~ 9 단
-$i = 1;
-$num = 1;
-$dan = 2;
-$gugudan="";
-$two_multiple = "2 * ";
-$is =" = ";
+// $i = 1;
+// $num = 1;
+// $dan = 2;
+// $gugudan="";
+// $two_multiple = "2 * ";
+// $is =" = ";
 
-$multiple = $num." * ";
-
-
+// $multiple = $num." * ";
 
 
 
-    while ($i<=9)
-    {
-    echo $dan." * ".$i.$is.$gugudan = $dan*$i++."\n";
-    $i=1;
-}
+
+
+//     while ($i<=9)
+//     {
+//     echo $dan." * ".$i.$is.$gugudan = $dan*$i++."\n";
+//     $i=1;
+// }
 
 
 
