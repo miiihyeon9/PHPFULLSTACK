@@ -64,7 +64,7 @@ for($i=1;$i<=100;$i++)
     }
     if($remain==2)
     {
-        echo $i;
+        echo $i." ";
     }
     
 }
