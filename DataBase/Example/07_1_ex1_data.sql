@@ -35,5 +35,8 @@ FROM DUAL;
 -- 	DATE : 3byte 'YYYY-MM-DD'형식
 --		DATE(20230315)
 
--- 	DATETIME : 8byte 'YYYY-MM-DD HH:MM:SS'형식
+-- 	DATETIME : 8byte 'YYYY-MM-DD HH:MM:SS'형식 날짜 형식을 그대로 저장
 
+
+-- TIMESTAMP : 4byte (글로벌) 1970년 1월 1일을 기준으로 얼마나 흘렀나를 저장...........,,,,,,,,한다는데........
+-- php도 date함수가 이쓴ㄴ데 timestamp를 기준으로 함

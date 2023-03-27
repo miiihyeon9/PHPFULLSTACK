@@ -25,13 +25,11 @@ $count = 6;
 
 for($i=1;$i<=$count;$i++)
 {
-    
     for($num=1;$num<=$i;$num++)
     {
         echo "*";
     }
     echo "\n";
-
 }
 
 

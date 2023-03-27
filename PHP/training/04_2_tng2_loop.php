@@ -4,9 +4,7 @@
 
 
 $count = 1;
-
 $backward =5;
-
 
 for($i=$backward;$i>=$count;$i--)
 {

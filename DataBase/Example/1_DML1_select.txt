@@ -4,8 +4,6 @@
 	FROM [테이블명]
 	WHERE [쿼리 조건]
 	GROUP BY [컬럼명] HAVING [집계함수 조건]
-		
-
 	ORDER BY [컬럼명 ASC || 컬럼명 DESC]
 	;
 
