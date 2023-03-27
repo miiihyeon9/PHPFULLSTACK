@@ -127,10 +127,14 @@ $arr_temp = array(
 //         ,"korean" => "한식"
 // );
 
+// $chi= array("짜장면","짬뽕","탕수육");
+// $wes= array("스파게티","스테이크");
+// $kor= array("비빔밥","김치");
+
 // $food = array(
-//     "chinese" => array("짜장면","짬뽕","탕수육")
-//     ,"western" => array("스파게티","스테이크")
-//     ,"korean" => array("비빔밥","김치")
+//     "chinese" => $chi
+//     ,"western" => $wes
+//     ,"korean" => $kor
 // );
 
 // foreach($food as $key=>$value)
