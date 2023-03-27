@@ -102,8 +102,8 @@ $arr_temp = array(
 // print_r($week);
 
 
-unset($arr_temp[2][0][1]);
-print_r($arr_temp);
+// unset($arr_temp[2][0][1]);
+// print_r($arr_temp);
 
 // $chinese ="중식";
 // $western = "양식";
@@ -127,16 +127,88 @@ print_r($arr_temp);
 //         ,"korean" => "한식"
 // );
 
-$food = array(
-    "chinese" => array("짜장면","짬뽕","탕수육")
-    ,"western" => array("스파게티","스테이크")
-    ,"korean" => array("비빔밥","김치")
-);
+// $food = array(
+//     "chinese" => array("짜장면","짬뽕","탕수육")
+//     ,"western" => array("스파게티","스테이크")
+//     ,"korean" => array("비빔밥","김치")
+// );
 
-foreach($food as $key=>$value)
+// foreach($food as $key=>$value)
+// {
+//     print $key." : ".$value."\n";
+// }
+
+
+//  array_diff(배열1,배열2) : 중복되지 않는 원소 반환
+//  배열 1에 있는 값 중, 배열2에 속하지 않은 값 반환
+
+
+// $arr_diff_1 = array("a","b","c");
+
+// $arr_diff_2 = array("a","b","d");
+
+// $arr_diff= array_diff($arr_diff_1,$arr_diff_2);
+
+// print_r($arr_diff);
+
+// 배열의 정렬 : asort(), arsort(), ksort(),krsort()
+
+// asort() : 오름차순 (알파벳순)으로 정렬
+
+//     $arr_asort = array("b","a","d","c");
+// asort($arr_asort);
+// print_r($arr_asort);
+
+// // arsort() : 내림차순 ( z - a )
+
+//     $arr_arsort = array("b","a","d","c");
+// arsort($arr_arsort);
+// print_r($arr_arsort);
+
+// // ksort() : 키를 기준으로 오름차순
+// $arr_ksort = array( "key1" => "val1"
+//                 , "key3" => "val3"
+//                 , "key4" => "val4"
+//                 , "key2" => "val2"
+//                 );
+// ksort($arr_ksort);
+// print_r($arr_ksort);
+
+
+// // krsort() : 키를 기준으로 내림차순
+// $arr_krsort = array( "key1" => "val1"
+//                 , "key3" => "val3"
+//                 , "key4" => "val4"
+//                 , "key2" => "val2"
+//                 );
+// krsort($arr_krsort);
+// print_r($arr_krsort);
+
+
+// // array의 사이즈를 반환하는 함수 : count()
+// echo count($arr_krsort);
+
+// foreach() : 반복문
+
+// foreach($array as $key =>$val){}
+// foreach($array as $val){}
+$arr1= array( "a" => "1"
+                , "b" => "2"
+                , "c" => "3"
+                , "d" => "4"
+                );
+
+foreach($arr1 as $alpha =>$num)
+// 0번째 방 출력 -> 끝 -> 1번째 방 출력 -> 반복........하고 마지막 방 출력 완료하면 루프 종료
 {
-    print $key." : ".$value."\n";
+    echo $alpha." : ".$num."\n";
 }
+
+
+foreach($arr1 as $val){
+    echo $val."\n";
+}
+
 
 
 ?>

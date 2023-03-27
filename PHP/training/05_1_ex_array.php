@@ -38,23 +38,61 @@
 
 
 
-$arr_ass_del = array(
-                "된장찌개" => "파"
-                ,"볶음밥" => "양파"
-                ,"김치"=>"마늘"
-                ,"비빔밥"=>"참기름"
-                );
+// $arr_ass_del = array(
+//                 "된장찌개" => "파"
+//                 ,"볶음밥" => "양파"
+//                 ,"김치"=>"마늘"
+//                 ,"비빔밥"=>"참기름"
+//                 );
 
 
-    unset(
-        $arr_ass_del["김치"],$arr_ass_del["볶음밥"]
-        );
+//     unset(
+//         $arr_ass_del["김치"],$arr_ass_del["볶음밥"]
+//         );
 
 
-print_r($arr_ass_del);  
+// print_r($arr_ass_del);  
 
 
 
+$food = array
+(
+    "bibimbap"=>"rice"
+    ,"sandwich"=>"bread"
+    , "삭제" => "값값"
+    ,"chicken"=>"chicken"
+    ,"latte"=>"milk"
+);
+
+// foreach 문을 이용해서 키가 "삭제"해 주세요.
+
+// foreach($food as $delete =>$val){
+//     if($delete != "삭제"){
+//         // echo $delete." : ".$val."\n";
+//         var_dump($food);
+//     }
+// }
+
+// foreach($food as $delete =>$val){
+//     if($delete == "삭제"){
+//         unset($delete);
+//     }
+//     else{
+//         echo $delete." : ".$val."\n";
+//     }
+// }
+
+foreach($food as $delete =>$val)
+    {
+        if($delete === "삭제"){
+            unset($food[$delete]);
+        }
+        else{
+        echo $delete." : ".$val."\n";
+        }
+    }
+
+var_dump($food);
 
 
 
