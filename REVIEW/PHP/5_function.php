@@ -111,16 +111,16 @@
 
 // 1. 한줄 별 만들기
 // print_star 
-function print_star($count)
-{
-    for($i=1;$i<=$count;$i++)
-    {
-        echo "*";
-// $i 1부터 시작해서 $count보다 작거나 같을 때까지 $i가 1씩 증가하면서* 출력하고 
-    }
-    echo "\n";
-// for문이 종료하고 개행한다. 
-}
+// function print_star($count)
+// {
+//     for($i=1;$i<=$count;$i++)
+//     {
+//         echo "*";
+// // $i 1부터 시작해서 $count보다 작거나 같을 때까지 $i가 1씩 증가하면서* 출력하고 
+//     }
+//     echo "\n";
+// // for문이 종료하고 개행한다. 
+// }
 
 
 // function print_star_rect($line)
@@ -139,15 +139,45 @@ function print_star($count)
 
 
 
-function print_star_rect($line)
-{
-    for($j=1;$j<=$line;$j++)
-    {
-        print_star($j);
-    }
-}
-print_star_rect(6);
+// function print_star_rect($line)
+// {
+//     for($j=1;$j<=$line;$j++)
+//     {
+//         print_star($j);
+//     }
+// }
+// print_star_rect(6);
 
 // 함수를 왜 사용하는가ㅏㅏㅏㅏㅏ 
 // 식을 재사용하기 위해서
+
+
+
+// 배열로 별찍기
+$count = array(1,2,3,4,5);
+function print_star($count)
+{   
+    foreach($count as $key=> $value) 
+    {
+        $num=$value;
+        echo "*";
+    }   
+    
+    echo "\n";
+}
+print_star($count);
+
+
+// 일렬로 별 5줄 
+
+// function line_star($count)
+// {
+//     foreach($count as $key => $value)
+//     {
+//         print_star($count);
+//     }
+// }
+// line_star($count);
+
+
 ?>
