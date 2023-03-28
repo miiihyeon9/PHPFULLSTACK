@@ -209,9 +209,12 @@ foreach($arr1 as $alpha =>$num)
 }
 
 
-foreach($arr1 as $val){
+foreach($arr1 as $val)
+{
     echo $val."\n";
 }
+
+
 
 
 

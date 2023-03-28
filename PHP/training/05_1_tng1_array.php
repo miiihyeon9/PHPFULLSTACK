@@ -66,32 +66,19 @@ $food = array
 
 // foreach 문을 이용해서 키가 "삭제"해 주세요.
 
-// foreach($food as $delete =>$val){
-//     if($delete != "삭제"){
-//         // echo $delete." : ".$val."\n";
-//         var_dump($food);
-//     }
-// }
-
-// foreach($food as $delete =>$val){
-//     if($delete == "삭제"){
-//         unset($delete);
-//     }
-//     else{
-//         echo $delete." : ".$val."\n";
-//     }
-// }
-
 foreach($food as $delete =>$val)
     {
-        if($delete === "삭제"){
+        if($delete === "삭제")
+        {
             unset($food[$delete]);
         }
-        else{
+        else
+        {
         echo $delete." : ".$val."\n";
         }
     }
 
+print_r($food);
 var_dump($food);
 
 
