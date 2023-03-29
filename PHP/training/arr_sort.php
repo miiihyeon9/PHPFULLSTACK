@@ -44,25 +44,25 @@
 //     }
 // }
 
-// $arr = array(5,10,7,3,1);
+$arr = array(5,10,7,3,1);
 // $temp = $arr[0];
 // $arr[0] = $arr[1];
 // $arr[1] = $temp;
 
 
-// for($val=0;$val<count($arr);$val++)
-// {
-//     for($j=0;$j<$val;$j++)
-//     {
-//         if($arr[$val]<$arr[$j])
-//             {   
-//                 $temp = $arr[$val];
-//                 $arr[$val] = $arr[$j];
-//                 $arr[$j] = $temp;
-//     }        }
+for($val=0;$val<count($arr);$val++)
+{
+    for($j=0;$j<$val;$j++)
+    {
+        if($arr[$val]<$arr[$j])
+            {   
+                $temp = $arr[$val];
+                $arr[$val] = $arr[$j];
+                $arr[$j] = $temp;
+    }        }
     
-// }
-
+}
+print_r($arr);
 // arr[0] arr[1] 일때 temp = 5
 
 
@@ -88,19 +88,19 @@
 
 // $arr = array(5,10,7,3,1);
 
-    // for($val=count($arr)-1;$val>0;$val--)
-    // {
-    //     for($j=0;$j<$val;$j++)
-    //     {
-    //         if ($arr[$j]>$arr[$j+1])
-    //         {
-    //             $temp = $arr[$j];
-    //             $arr[$j] = $arr[$j+1];
-    //             $arr[$j+1] = $temp;
-    //         }
+//     for($val=count($arr)-1;$val>0;$val--)
+//     {
+//         for($j=0;$j<$val;$j++)
+//         {
+//             if ($arr[$j]>$arr[$j+1])
+//             {
+//                 $temp = $arr[$j];
+//                 $arr[$j] = $arr[$j+1];
+//                 $arr[$j+1] = $temp;
+//             }
 
-    //     }
-    // }
+//         }
+//     }
 
 // print_r($arr);
 
