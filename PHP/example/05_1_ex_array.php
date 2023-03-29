@@ -20,7 +20,8 @@
 // $week3 = array($week[0],$week[1],$week[2],$week[3]);
 
 
-
+// count(배열)
+//  : 배열의 원소의 개수를 알아내는 함수
 
 // $week2 = array ($mon,$wed,$sun,$tue);
 

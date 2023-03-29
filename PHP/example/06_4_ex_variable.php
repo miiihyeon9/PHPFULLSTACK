@@ -5,6 +5,9 @@
 // {
 //     global $global_int_a;
 //     //  global - 전역변수 : function외에 어디에서나 변수로 사용할 수 있음.........
+//                              다른 파일을 가져왔을 때도 이 변수가 사용될 수 있기 때문에 사용할 때 조심히 사용해야함
+//                             변수명을 설정할 때 앞에 global이라고 써주면 알아보기 쉽다
+
 //     $global_int_a = $global_int_a +10;
 //     return $global_int_a;
 // }
