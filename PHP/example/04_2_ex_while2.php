@@ -65,15 +65,15 @@ for ($i=1; $i <= 10; $i++) {
 //     ++$dan;
 // }
 
-// for($dan=2; $dan<=9; $dan++)
-// {   echo $dan."단\n";
-//     for( $num=1; $num<=9; $num++)
-//     {
-//         $result = $dan." * ".$num." = ".$dan*$num."\n";
-//         echo $result;
+for($dan=2; $dan<=9; $dan++)
+{   echo $dan."단\n";
+    for( $num=1; $num<=9; $num++)
+    {
+        $result = $dan." * ".$num." = ".$dan*$num."\n";
+        echo $result;
         
-//     }
-// }
+    }
+}
 // while은 어디서부터 시작할지 설정할 수가 없었음
 // for은 처음 조건에 설정할 수 있음
 

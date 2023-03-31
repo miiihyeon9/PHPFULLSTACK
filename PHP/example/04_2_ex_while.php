@@ -28,11 +28,11 @@ while ($i<10)
 
 
 
-//     while ($i<=9)
-//     {
-//     echo $dan." * ".$i.$is.$gugudan = $dan*$i++."\n";
-//     $i=1;
-// }
+    while ($i<=9)
+    {
+    echo $dan." * ".$i.$is.$gugudan = $dan*$i++."\n";
+    $i=1;
+}
 
 
 
