@@ -11,6 +11,7 @@
 // function fnc_add(매개변수)
 //                      함수를 정의할 때 사용하는 함수
 
+
 // function fnc_add($int_a,$int_b)
 // {
 //     $sum = $int_a + $int_b;

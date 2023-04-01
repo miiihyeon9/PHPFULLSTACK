@@ -7,14 +7,18 @@
 // $week = array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
 // //              0    1      2     3     4     5     6
 
+
 // echo $week[0];
 
+
 //  array안에도 변수로 설정할 수 있음
+
 
 // $mon = "Mon";
 // $sun = "Sun";
 // $tue = "Tue";
 // $wed = "Wed";
+
 
 // $week2 = array($sun,$mon,$tue,$wed);
 // $week3 = array($week[0],$week[1],$week[2],$week[3]);
@@ -67,16 +71,16 @@
 //                 ,array(5,6,7,8)
 //             );
 
-// echo $arr_temp[1][3]; 
+// echo $arr_temp[1][3];    //:8
 
 
-$arr_temp = array(
-                array(1,2,3,4)
-                ,array(5,6,7,8)
-                ,array(
-                    array(9,10,11)
-                )
-            );
+// $arr_temp = array(
+//                 array(1,2,3,4)
+//                 ,array(5,6,7,8)
+//                 ,array(
+//                     array(9,10,11)
+//                 )
+//             );
 
 
 // echo $arr_temp[2][0][1];
@@ -197,23 +201,69 @@ $arr_temp = array(
 
 // foreach($array as $key =>$val){}
 // foreach($array as $val){}
-$arr1= array( "a" => "1"
-                , "b" => "2"
-                , "c" => "3"
-                , "d" => "4"
+// $arr1= array( "a" => "1"
+//                 , "b" => "2"
+//                 , "c" => "3"
+//                 , "d" => "4"
+//                 );
+
+// foreach($arr1 as $alpha =>$num)
+// // 0번째 방 출력 -> 끝 -> 1번째 방 출력 -> 반복........하고 마지막 방 출력 완료하면 루프 종료
+// {
+//     echo $alpha." : ".$num."\n";
+// }
+
+
+// foreach($arr1 as $val)
+// {
+//     echo $val."\n";
+// }
+
+
+
+// $arr_i = array(1,2,3);
+// echo $arr_i[1];
+
+
+
+// 연상배열 std_no, std_name, std_age, std_gender
+
+
+$arr_acc= array("std_no" => 3
+                , "std_name" => "김미현"
+                , "std_age" => 26
+                , "std_gender" => "F"
+                , "std_secret_info" =>
+                    array("std_city__no" => 0716
+                        , "std_addr" => "대구 중구 중앙로")
                 );
 
-foreach($arr1 as $alpha =>$num)
-// 0번째 방 출력 -> 끝 -> 1번째 방 출력 -> 반복........하고 마지막 방 출력 완료하면 루프 종료
-{
-    echo $alpha." : ".$num."\n";
-}
+// print_r($arr_acc);
+// foreach($arr_acc as $key=>$val)
+// {
+//     echo $key." => ".$val."\n";
+// }
+
+// echo $arr_acc["std_name"];
+
+// 다차원 배열
+// echo $arr_acc["std_secret_info"]["std_addr"];
 
 
-foreach($arr1 as $val)
-{
-    echo $val."\n";
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

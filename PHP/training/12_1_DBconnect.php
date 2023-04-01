@@ -44,20 +44,20 @@ $result_query = mysqli_query($dbc
 
 
 //
-$flg_cnt = false;
-$temp_row=mysqli_fetch_assoc($result_query);
-var_dump($temp_row);                            // null
+// $flg_cnt = false;
+// $temp_row=mysqli_fetch_assoc($result_query);
+// // var_dump($temp_row);                            // null
 
-while($temp_row=mysqli_fetch_assoc($result_query))
-{
-    echo $str_temp = implode(" ",$temp_row)."\n";
-    $flg_cnt = true;
-}
-// 변수 앞에 !사용하면 해당 변수의 bool값을 반대로 뒤집는다. 
-// true를 false로 false는 true로
-if(!$flg_cnt){
-    echo "데이터가 0건 입니다.";
-} 
+// while($temp_row=mysqli_fetch_assoc($result_query))
+// {
+//     echo $str_temp = implode(" ",$temp_row)."\n";
+//     $flg_cnt = true;
+// }
+// // 변수 앞에 !사용하면 해당 변수의 bool값을 반대로 뒤집는다. 
+// // true를 false로 false는 true로
+// if(!$flg_cnt ){                                 // $flg_cnt == 0 이랑 같음
+//     echo "데이터가 0건 입니다.";
+// } 
 
 
 // mysqli_fetch_assoc($result_query);

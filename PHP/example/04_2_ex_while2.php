@@ -31,9 +31,11 @@
 
 // $i = 0;
 // do{
-//     echo $i."\n"."do while";
+//     echo $i."\n"."do while"."\n";
+//     $i++;
 // }
 // while( $i === 1);
+
 // while ($i === 1);
 // {
 //     echo $i,"while";
@@ -43,6 +45,7 @@
 // for 문
 // 언제 멈춰야할지 모를 때 for문 사용
 
+
 for ($i=1; $i <= 10; $i++) { 
     // $i 가 1부터 10까지 1씩 증가
     echo $i;
@@ -51,6 +54,7 @@ for ($i=1; $i <= 10; $i++) {
 // 코드가 한번 실행이 되었을 때 $i는 1씩 증가하고,
 // $i가 11이 되었을 경우 $i <= 10 과 조건이 일치하지 않기 때문에
 // 코드가 종료된다. 
+
 
 
 // for($dan=2; $dan<=9; $dan++)
@@ -65,15 +69,15 @@ for ($i=1; $i <= 10; $i++) {
 //     ++$dan;
 // }
 
-for($dan=2; $dan<=9; $dan++)
-{   echo $dan."단\n";
-    for( $num=1; $num<=9; $num++)
-    {
-        $result = $dan." * ".$num." = ".$dan*$num."\n";
-        echo $result;
+// for($dan=2; $dan<=9; $dan++)
+// {   echo $dan."단\n";
+//     for( $num=1; $num<=9; $num++)
+//     {
+//         $result = $dan." * ".$num." = ".$dan*$num."\n";
+//         echo $result;
         
-    }
-}
+//     }
+// }
 // while은 어디서부터 시작할지 설정할 수가 없었음
 // for은 처음 조건에 설정할 수 있음
 
