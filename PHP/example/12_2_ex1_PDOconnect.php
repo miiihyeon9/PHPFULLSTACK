@@ -2,7 +2,9 @@
 // PDO  이용해서 데이터베이스 가져오기
 // PHP DATA OBJECT
 // 확장성 용이, 쿼리만 조금 바꿔주면 다른곳에서도 쉽게 사용 가능
+
 //php.ini 에서 extension=pdo_mysql 주석제거
+
 $db_host = "localhost"; // 원래는 아이피가 들어감
 $db_user = "root";      // user
 $db_password = "root506";   //password

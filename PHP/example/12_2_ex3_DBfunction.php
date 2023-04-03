@@ -43,10 +43,12 @@ function my_db_conn( &$param_conn )
 //             );
 
 
-// $stmt = $obj_conn->prepare( $sql );
-// $stmt->execute( $arr_prepare );
+$stmt = $obj_conn->prepare( $sql );
+$stmt->execute( $arr_prepare );
 
-// $result = $stmt->fetchAll();
+$result = $stmt->fetchAll();
+
+
 
 // var_dump($result);
 

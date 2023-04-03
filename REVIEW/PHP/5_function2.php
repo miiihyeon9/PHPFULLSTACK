@@ -4,16 +4,16 @@
 
 // 1. 한줄 별 만들기
 // print_star 
-function print_star($count)
-{
-    for($i=1;$i<=$count;$i++)
-    {
-        echo "*";
-// $i 1부터 시작해서 $count보다 작거나 같을 때까지 $i가 1씩 증가하면서* 출력하고 
-    }
-    echo "\n";
-// for문이 종료하고 개행한다. 
-}
+// function print_star($count)
+// {
+//     for($i=1;$i<=$count;$i++)
+//     {
+//         echo "*";
+// // $i 1부터 시작해서 $count보다 작거나 같을 때까지 $i가 1씩 증가하면서* 출력하고 
+//     }
+//     echo "\n";
+// // for문이 종료하고 개행한다. 
+// }
 
 
 // function print_star_rect($count)
@@ -32,14 +32,14 @@ function print_star($count)
 
 
 
-function print_star_rect($count)
-{
-    for($j=1;$j<=$count;$j++)
-    {
-        print_star($j);
-    }
-}
-print_star_rect(6);
+// function print_star_rect($count)
+// {
+//     for($j=1;$j<=$count;$j++)
+//     {
+//         print_star($j);
+//     }
+// }
+// print_star_rect(6);
 
 // 함수를 왜 사용하는가ㅏㅏㅏㅏㅏ 
 // 식을 재사용하기 위해서
@@ -75,28 +75,28 @@ print_star_rect(6);
 
 
 
-// function print_star()
-// {   
-//     $count =func_get_args();
-//     foreach($count as $key=> $value) 
-//     {
-//         if(is_null($key))
-//         {
-//             $key++;
-//         }
-//         else
-//         {
-//             for($i=0;$i<=$key;$i++)
-//             {
-//                 echo "*";
-//             }
-//             echo "\n";
-//         }
-//     }   
+function print_star()
+{   
+    $count =func_get_args();
+    foreach($count as $key=> $value) 
+    {
+        if(is_null($key))
+        {
+            $key++;
+        }
+        else
+        {
+            for($i=0;$i<=$key;$i++)
+            {
+                echo "*";
+            }
+            echo "\n";
+        }
+    }   
     
-// }
+}
 
-// print_star(1,2,3,4,5,6,7);
+print_star(1,2,3,4,5,6,7);
 
 
 
