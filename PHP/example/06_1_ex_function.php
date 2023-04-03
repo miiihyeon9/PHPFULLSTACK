@@ -36,7 +36,9 @@ function fnc_args_add()
     $sum = 0;               // 더하기 결과 저장 변수
     foreach ($args as $value) {         // 더하기 실행 loop
         $sum += $value;
+        
     }
+    // print_r($args);
     return $sum;
 }
 $result = fnc_args_add(1,2,3,4);
