@@ -24,24 +24,27 @@ function my_db_conn( &$param_conn )
     $param_conn = new PDO( $db_dns, $db_user, $db_password, $db_option);
 }
 
-// $obj_conn = null;   // PDO Class
+$obj_conn = null;   // PDO Class
 
-// // DB Connect
-// my_db_conn($obj_conn);  
+// DB Connect
+my_db_conn($obj_conn);  
 
 // //sql 쿼리 
-
+// $sql="";
+// function limit_start_count($cnt)
+// {
 // $sql = 
 //     " SELECT "
 //     ." * "
 //     ." FROM employees "
 //     ."LIMIT :limit_start ";
-
 // $arr_prepare = 
 //             array(
-//                 ":limit_start"=>5
+//                 ":limit_start"=>$cnt
 //             );
+//         }
 
+// limit_start_count(5);
 
 $stmt = $obj_conn->prepare( $sql );
 $stmt->execute( $arr_prepare );
@@ -50,7 +53,7 @@ $result = $stmt->fetchAll();
 
 
 
-// var_dump($result);
+var_dump($result);
 
 
 
