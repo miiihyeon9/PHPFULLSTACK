@@ -13,13 +13,22 @@ $complete_sql =
     ." WHERE "
     ." complete_todo = "
     ."'1'"
+    ." AND "
+    ." create_date = "
+    ." :create_date "
     ;
-$complete_stmt = $obj_conn->query( $complete_sql );
-$complete_stmt->execute();
+
+$complete_arr_prepare = 
+                    array(
+                        ":create_date"=>"20230404"
+                    );
+$complete_stmt = $obj_conn->prepare( $complete_sql );
+$complete_result = $complete_stmt->execute($complete_arr_prepare);
 $complete_result = $complete_stmt->fetchAll();
 
+
 //하루 todo 목록 가져오기 
-$total_sql = 
+    $total_sql = 
     " SELECT "
     ." * "
     ." FROM "
@@ -28,27 +37,28 @@ $total_sql =
     ." create_date = "
     ." :create_date ";
 
-$arr_prepare =
+
+$total_arr_prepare =
         array(
             ":create_date"=>"2023-04-04"
         );
 
-$total_stmt = $obj_conn->query( $total_sql );
-$total_stmt->execute( $arr_prepare );
+$total_stmt = $obj_conn->prepare( $total_sql );
+$total_result = $total_stmt->execute( $total_arr_prepare );
 $total_result = $total_stmt->fetchAll();
+
+
+
+
+
+var_dump($complete_result);
+echo "ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ";
+var_dump($total_result);
 
 
 // 백분율
 $percentage = (count($complete_result)/count($total_result))*100;
-
 echo $percentage."%";
-
-
-
-
-
-
-
 
 
 
