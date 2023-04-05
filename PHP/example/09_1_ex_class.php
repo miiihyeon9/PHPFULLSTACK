@@ -1,10 +1,9 @@
 <?php
 // // class : 동종의 객체들이 모여있는 집합
-
 // class Student
 // {
 //     // 클래스 멤버 변수
-//           //접근 제어 지시자 : public private protected 
+//           // 접근 제어 지시자 : public private protected 
 //     public $std_name;       // 어디서든 접근 가능
 //     protected $std_age;     // 자기자신과 상속class내에서만 접근 가능 
 //     private $std_id;        // student class내에서만 접근 가능
@@ -12,20 +11,16 @@
 
 // // 객체지향으로 전에는 하나를 고쳐야할 때 전부다 고쳐야 했다면 객체지향은 고쳐야 하는 부분들만 고치면 되기 때문에 효율성이 좋음 
 // // 
-
 // // private 객체를 외부에서 사용할 수 있는 방법
 //     public function set_std_id($param_id)
 //     {
 //         // this 포인터 : class 자기자신을 가르키고 있다. 
 //         $this->std_id = $param_id;
 //     }
-
 //     public function get_std_id()
 //     {
 //         return $this->std_id;
 //     }
-
-
 
 //     // 클래스 안에 있는 function을 method라고 부른다...function이라고 부르기도 함 알아들어
 //     public function print_student($param_std_name,$param_std_age)
@@ -71,7 +66,6 @@
 class food
 {
     private $food_name;
-
     //생성자
     public function __construct($parama_food_name)      // 7.4부터 __construct 사용
     {
@@ -82,6 +76,7 @@ class food
     {
         echo $this->food_name;
     }
+    
 }
 
 $obj_food = new food( "탕수육" );

@@ -17,10 +17,10 @@ $complete_sql =
     ." create_date = "
     ." :create_date "
     ;
-
+$todo_date = "2023-04-04";
 $complete_arr_prepare = 
                     array(
-                        ":create_date"=>"20230404"
+                        ":create_date"=>"$todo_date"
                     );
 $complete_stmt = $obj_conn->prepare( $complete_sql );
 $complete_result = $complete_stmt->execute($complete_arr_prepare);
@@ -58,7 +58,7 @@ var_dump($total_result);
 
 // 백분율
 $percentage = (count($complete_result)/count($total_result))*100;
-echo $percentage."%";
+echo $percentage;
 
 
 

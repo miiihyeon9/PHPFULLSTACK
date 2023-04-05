@@ -23,7 +23,9 @@ $sql =
     ." , :modify_date "
     ." , :complete_todo "
     ." ) " ;
-    
+
+
+
 $arr_prepare = 
         array(
             ":list_no"=> 6
@@ -32,6 +34,7 @@ $arr_prepare =
             ,":modify_date"=>"00000000"
             ,":complete_todo"=>"0"
         );
+
 
 $stmt = $obj_conn->prepare( $sql );
 $stmt->execute( $arr_prepare );
