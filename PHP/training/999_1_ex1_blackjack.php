@@ -1,4 +1,5 @@
 <?php
+include_once("./999_1_ex1_blackjack_fnc.php");
 //블랙잭 게임
 //-카드 숫자를 합쳐 가능한 21에 가깝게 만들면 이기는 게임
 
@@ -14,13 +15,13 @@
 
 
 // $card = array("spade" =>
-// array('A','1','2','3','4','5','6','7','8','9','10',"K","Q","J")
+// array("A","2","3","4","5","6","7","8","9","10","K","Q","J")
 // , "clover" =>
-// array('A','1','2','3','4','5','6','7','8','9','10',"K","Q","J")
+// array("A","2","3","4","5","6","7","8","9","10","K","Q","J")
 // , "dia" =>
-// array('A','1','2','3','4','5','6','7','8','9','10',"K","Q","J")
+// array("A","2","3","4","5","6","7","8","9","10","K","Q","J")
 // ,"heart" =>
-// array('A','1','2','3','4','5','6','7','8','9','10',"K","Q","J")
+// array("A","2","3","4","5","6","7","8","9","10","K","Q","J")
 // );
 $player = array();
 $dealer = array();
@@ -31,7 +32,7 @@ foreach ($shapes as $shape)
 {
     foreach ($cards as $card) 
     {
-    $deck[] = array($shape.$card);            // $deck 배열에  추가 
+    $deck[] = array("shape"=>$shape,"card"=>$card);            // $deck 배열에  추가 
     }
 }
 
@@ -40,44 +41,48 @@ foreach ($shapes as $shape)
 // 카드를 섞어서 딜러와 플레이어 한테 두 장씩 부여 
 // array_shift 함수는 배열의 원소를 이동시키고 인덱스값을 정렬해줌
 shuffle($deck);
-for($i=1;$i<=2;$i++)
-{
-    echo "Player : ";
-    $player = array_shift($deck);
-    print_r($player);
-    echo "dealer : ";
-    $dealer = array_shift($deck);
-    print_r($dealer);
-}
 
-// var_dump($dealer);
-// $arr = array("shape"=>"dia","card"=> "8");               // dealer player deck 구조 $arr이 여러개 있는 2차원 배열 
-// var_dump($arr);
+$dealer_score = 0;
+$player_score = 0;
 
-// 점수 부여해주고 
-// if($card === "A"){
-//     $score = 1;
-// }else if($card === ("K"||"Q"||"J"||10))
-// {
-//     $score = 10;
-// }else if($card === "1")
-// {
-//     $score = 1;
-// }
+
+pick_card($player,$deck);
+pick_card($player,$deck);
+
+pick_card($dealer,$deck);
+pick_card($dealer,$deck);
+decide_score($player,$player_score);
+decide_score($dealer,$dealer_score);
+
+
+
 
 // 1-1. 이때 유저 또는 딜러의 카드 합이 21이면 결과 출력
-
-
-
-
-
-
+if($dealer_score === 21 || $player_score === 21)
+{
+    echo "Dealer : ".$dealer_score."\n";
+    echo "Player : ".$player_score."\n";
+    if( $dealer_score === 21 ){
+        echo "Dealer win";
+    }else{
+        echo "Player win";
+    }
+}
 //2. 카드 합이 21을 초과하면 패배
-// 2-1. 유저 또는 딜러의 카드의 합이 21이 넘으면 결과 바로 출력
-//4. 카드의 계산은 아래의 규칙을 따른다.
-// 4-1.카드 2~9는 그 숫자대로 점수
-// 4-2. K·Q·J,10은 10점
+
+if($dealer_score > 21)
+{
+    echo "딜러 : ".$dealer_score."\n"."플레이어 : ".$player_score;
+    echo "딜러가 패배하였습니다.";
+}
+else if($player_score>21)
+{   
+    echo "딜러 : ".$dealer_score."\n"."플레이어 : ".$player_score;
+    echo "플레이어가 패배하였습니다.";
+}
+
 // 4-3. A는 1점 또는 11점 둘 중의 하나로 계산
+
 //5. 카드의 합이 같으면 다음의 규칙에 따름
 // 5-1. 카드수가 적은 쪽이 승리
 // 5-2. 카드수가 같을경우 드로우                                                  (스페이드>크로버>다이아>하트 순)
@@ -87,28 +92,6 @@ for($i=1;$i<=2;$i++)
 //7. 1입력 : 카드 더받기, 2입력 : 카드비교, 0입력 : 게임종료
 // 2를 입력하면 비교하고 다시 
 // 0을 입력하거나 카드가 없는 경우 게임 종류 
-
-
-
-
-// $card = array("spade" =>
-// array('A','1','2','3','4','5','6','7','8','9','10',"K","Q","J")
-// , "clover" =>
-// array('A','1','2','3','4','5','6','7','8','9','10',"K","Q","J")
-// , "dia" =>
-// array('A','1','2','3','4','5','6','7','8','9','10',"K","Q","J")
-// ,"heart" =>
-// array('A','1','2','3','4','5','6','7','8','9','10',"K","Q","J")
-// );
-
-// $deck = shuffle($card);
-
-
-
-
-
-
-
 
 
 
@@ -122,7 +105,7 @@ for($i=1;$i<=2;$i++)
 // 	echo $input;
 // 	print "\n";
 // }
-// echo "끝!\n"; 
+// echo "끝!\n";
 
 
 
