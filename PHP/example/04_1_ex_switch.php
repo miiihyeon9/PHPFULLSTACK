@@ -16,5 +16,20 @@ $val = 1;
             break;
     }
 
+$val1 = 1 ;
+$val2 = 2 ;
+switch($player_str1)
+{
+    case 'K':
+        10;
+        break;
+
+}
+
+
+
+
+
+
 
 ?>

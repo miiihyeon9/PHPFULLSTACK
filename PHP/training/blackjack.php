@@ -40,18 +40,28 @@ while(true)
         blackjack($dealer_score,$player_score);
         // 한장 더 뽑았는데 21점 넘으면 딜러 패배 
         over_score($dealer_score,$player_score);
+        
         game_result($dealer_score,$player_score);
-        break;
-}
-    
-// while(true)
+        echo "한장 더 뽑으시겠습니까? 0번 :종료, 1번 : 한번더 , 2번 :비교하기\n";
+    }
+        while( $input === 1 ){
+            pick_card($player,$deck);
+            decide_score($player,$player_score);
+            over_score($dealer_score,$player_score);
+            game_result($dealer_score,$player_score);
+            break;
+        }
+        while( $input === 2 )
+        {
+            game_result($dealer_score,$player_score);
+            break;
+        }
+
+    // if( $input === 1 )
 // {
-//     echo "한장 더 뽑으시겠습니까? 0번 :종료, 1번 : 한번더 , 2번 :비교하기\n";
-//     if( $input === 1 )
-//     {
-//         pick_card($player,$deck);
-//         decide_score($player,$player_score);
-//     }
+//     pick_card($player,$deck);
+//     decide_score($player,$player_score);
+// }
 //     // 한장 더 받고 21장이 넘었을 때 패배
 //     over_score($dealer_score,$player_score);
 //     if($input === 2 )
@@ -145,22 +155,3 @@ while(true)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>

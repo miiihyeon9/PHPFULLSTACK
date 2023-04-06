@@ -1,5 +1,6 @@
-<?php
-class people
+<?php 
+
+class People
 {
     private $peo_name;
     public function set_name($param_name)
