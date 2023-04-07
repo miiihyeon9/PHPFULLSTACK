@@ -41,128 +41,78 @@ function fnc_decide_score(&$picker,&$picker_score)       // 점수부여 함수 
     }
     return $picker_score;
 }
-        
 
 // -- 기능 21점이 초과했을 때 패배
-function fnc_lose_over_picker_score(&$dealer_picker_score,&$player_picker_score)
+function fnc_lose_over_score(&$dealer_score,&$player_score)
 {
-    if($dealer_picker_score > 21)
-{
-    echo "딜러가 패배하였습니다.";
-}
-else if($player_picker_score>21)
-{   
-    echo "플레이어가 패배하였습니다.";
-}
-}
-
-
-// -- 기능 : 딜러가 17점 미만 카드 더 가져감
-function fnc_take_card(&$dealer_picker_score)
-{
-    if($dealer_picker_score<17){
-        pick_card($dealer,$deck);
-        fnc_decide_score($dealer,$dealer_score);
-    }
-}
-
-
-
-// 카드 수 적은 쪽이 승리
-function victory_count_card()
-{
-    if($dealer_picker_score = $player_picker_score)
-    {
-        if(count($dealer) < count($player))
+        $score = array("Dealer"=>$dealer_score,"Player"=>$player_score);
+        foreach($score as $key=> $val)
         {
-            echo "딜러 승리 ";
-        }else if(count($dealer) > count($player)){
-            echo "플레이어 승리 ";
-        }else{
-            echo "드로우";
+            if($val >21 )
+            {
+                echo $key."  ".$val."  Burst\n";
+            }
         }
-    }
 }
 
 
 
 // 기능 : 21점일 때 블랙잭 
-function fnc_blackjack(&$dealer_picker_score,&$player_picker_score)
+function fnc_blackjack(&$dealer_score,&$player_score)
 {
-        if( $dealer_picker_score === 21 ){
-            echo "Dealer win";
-        }else if($player_picker_score === 21)
-        {
-            echo "Player win";
-        }
-        
+    if( $dealer_score === 21|| $player_score ===21 ){
+        echo "Blackjack!!";
+    }
+    
 }
 
 
-
-
-
-
-function fnc_show_game_result(&$dealer_picker_score,&$player_picker_score)
+function fnc_show_game_result(&$dealer_score,&$player_score)
 {
-    if($dealer_picker_score < $player_picker_score){
-        echo "플레이어 승\n";
-    }else if($dealer_picker_score > $player_picker_score){
-        echo "딜러 승\n";
-    }else if($dealer_picker_score = $player_picker_score){
-        echo " 무승부\n";
+    if($dealer_score < $player_score && $player_score<=21)
+    {
+        echo "Player Win\n";
+    }else if($dealer_score > $player_score && $dealer_score<=21)
+    {
+        echo "Dealer Win\n";
+    }else if($dealer_score === $player_score )
+    {
+        echo "Draw\n";
     }
 }
 
 
 
 
-// <!-- 
 
-// include_once("./999_1_ex1_blackjack_fnc.php");
-// fscanf(STDIN, "%d\n", $input);     
-// while(true) 
+
+
+
+
+// -- 기능 : 딜러가 17점 미만 카드 더 가져감
+function fnc_take_card(&$dealer_score)
+{
+    if($dealer_score<17){
+        $dealer_score =0;
+        fnc_pick_card($dealer,$deck);
+        fnc_decide_score($dealer,$dealer_score);
+    }
+}
+
+
+// 카드 수 적은 쪽이 승리
+// function victory_count_card()
 // {
-// 	echo '시작';
-// 	print "\n";
-// 	if($input === 0) {                  //0입력시 종료
-// 		break;
-// 	}
-//     $player = array();
-//     $dealer = array();
-//     $deck= array();
-//     $shapes = array("spade","clover","dia","heart");
-//     $cards = array("A","2","3","4","5","6","7","8","9","10","K","J","Q");
-//     foreach ($shapes as $shape) 
+//     if($dealer_score = $player_score)
 //     {
-//         foreach ($cards as $card) 
+//         if(count($dealer) < count($player))
 //         {
-//             $deck[] = array("shape"=>$shape,"card"=>$card);            // $deck 배열에  추가 
+//             echo "딜러 승리 ";
+//         }else if(count($dealer) > count($player)){
+//             echo "플레이어 승리 ";
+//         }else{
+//             echo "드로우";
 //         }
 //     }
-//     shuffle($deck);
-//         $dealer_picker_score = 0;
-//         $player_picker_score = 0;
-//         for($i=1;$i<=2;$i++)
-//         {
-//             pick_card($player,$deck); 
-//             pick_card($dealer,$deck);
-//         }
-//         echo "플레이어 : ".decide_picker_score($player,$player_picker_score)." ";
-//         echo "딜러 : ".decide_picker_score($dealer,$dealer_picker_score)."\n";
-//         // 딜러가 17점 이하일 때 한장 더 받아
-//         if($dealer_picker_score<17)
-//         {
-//         pick_card($dealer,$deck);
-//         decide_picker_score($dealer,$dealer_picker_score);
-//         }
-//         // 두장 뽑아서 블랙잭일 때 승리 
-//         blackjack($dealer_picker_score,$player_picker_score);
-//         // 한장 더 뽑았는데 21점 넘으면 딜러 패배 
-//         over_picker_score($dealer_picker_score,$player_picker_score);
-//         game_result($dealer_picker_score,$player_picker_score);
-//         break;
-// } -->
-
-
+// }
 ?>
