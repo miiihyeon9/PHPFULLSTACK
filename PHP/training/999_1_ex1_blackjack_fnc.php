@@ -10,6 +10,7 @@ function fnc_pick_card(&$picker,&$deck)
 
 function fnc_decide_score(&$picker,&$picker_score)       // 점수부여 함수 A면 11점 / K, Q, J, 10 이면 10점 / 2~9 는 각 숫자만큼 
 {
+    $picker_score = 0;
     for($i=0;$i<count($picker);$i++)           
     {
         if($picker[$i]["card"] === "A")
@@ -81,14 +82,6 @@ function fnc_show_game_result(&$dealer_score,&$player_score)
     }
 }
 
-
-
-
-
-
-
-
-
 // -- 기능 : 딜러가 17점 미만 카드 더 가져감
 function fnc_take_card(&$dealer_score)
 {
@@ -115,4 +108,12 @@ function fnc_take_card(&$dealer_score)
 //         }
 //     }
 // }
+// 카드 결과 보여주기
+function show_card(&$picker,&$picker_score)
+{
+    for($i=0;$i<count($picker);$i++)
+    {
+        echo implode("",$picker[$i])."   ";
+    }
+}
 ?>

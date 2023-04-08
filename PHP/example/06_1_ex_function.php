@@ -19,13 +19,14 @@
 
 
 
-// function fnc_add($int_a,$int_b)
-// {
-//     $sum = $int_a + $int_b;
+function fnc_add($int_a,$int_b)
+{
+    $sum = $int_a + $int_b;
 
-//     return $sum;
+    return $sum;
 
-// }
+}
+fnc_add(10,2);
 // return 해당 함수에서의 탈출. 
 //      : 현재 실행 중인 메소드를 종료하고 결과값을 되돌려주라는 명령어
 
@@ -50,7 +51,7 @@ function fnc_args_add()
 }
 $result = fnc_args_add(1,2,3,4);
 
-echo $result;
+echo $result;    //10
 
 
 ?>

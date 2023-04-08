@@ -85,6 +85,6 @@ $int_b =2;
 fnc_val($int_a,$int_b);         // $int_a는 $a의 주소를 참조하고, $int_b는 $b의 주소를 참조하겠다. 
 
 
-echo $int_a," ",$int_b;   
+echo $int_a," ",$int_b;   //3 4
 
 ?>

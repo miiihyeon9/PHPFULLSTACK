@@ -29,7 +29,7 @@ $sql =
     INNER JOIN salaries sal 
         ON emp.emp_no = sal.emp_no
     WHERE sal.to_date >= :to_date
-    // :다음에 _말고 .기호 사용x 
+// :다음에 _말고 .기호 사용x 
     ORDER BY sal.salary DESC LIMIT 5 ";
 $arr_prepare =
         array( 
