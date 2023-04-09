@@ -4,11 +4,11 @@
 // 기능			: 블랙잭 게임(터미널에서 입력값 받아 진행)
 // 이력			: v001 : new - BJ.Park
 //-----------------------------------------------------
-define( "FILE_NAME_DECK", "999_2_deck.txt");
-define( "FILE_NAME_HAND", "999_2_hand.txt");
-define( "STR_CARD_NUM", "card_num");
-define( "STR_CARD_SHAPE_KEY", "card_shape_key");
-define( "FLG_DEBUG", true );
+define( "FILE_NAME_DECK", "999_2_deck.txt");  // 덱 종류
+define( "FILE_NAME_HAND", "999_2_hand.txt");	// 딜러, 플레이어 카드 종류
+define( "STR_CARD_NUM", "card_num"); 	// 카드번호
+define( "STR_CARD_SHAPE_KEY", "card_shape_key");		// 카드 모양
+define( "FLG_DEBUG", true );		// 디버그 확인 true면 파일 2개 생성 false면 파일 삭제 
 
 //블랙잭 게임
 //-카드 숫자를 합쳐 가능한 21에 가깝게 만들면 이기는 게임
