@@ -23,8 +23,8 @@ $sql = " INSERT INTO departments
 
 $arr_prepare = 
     array(
-        "dept_no" => "d011"
-        , "dept_name" => "PHPfullstack"
+        ":dept_no" => "d011"
+        , ":dept_name" => "PHPfullstack"
     );
 
 

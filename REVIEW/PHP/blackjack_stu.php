@@ -33,40 +33,40 @@ class Card
             case "Q":
             case "K":
                 return 10;
+                break;
             case "A":       // A가 $param_num가 10점이 넘을 경우에는 1점을 반환하고
                             // 그게 아니면 11점 반환
                 if($param_score > 10)
                 {
                     return 1;
+                    break;
                 }
                 else
                 {
                     return 11;
+                    break;
                 }
             default:
-            return (int)$param_num;     // 문자인 $param_num를 int로 변환한다. 
+                return (int)$param_num;  
+                break;   // 문자인 $param_num를 int로 변환한다. 
         }
     }
 
-    // 함수 :  카드 모양 배열로 반환하는 함수
     public function get_card_shape( $param_key )
     {
         return $this->arr_card_shape[$param_key];
     }
 
-    // 함수 :  카드번호 반환하는 함수 
     public function get_arr_card_num()
     {
         return $this->arr_card_num;
     }
 
-    // 함수 : 카드모양 반환하는 함수 
     public function get_arr_card_shape()
     {
         return $this->arr_card_shape;
     }
 
-    // 함수 :  카드 개수 세는 함수
     public function get_cnt_card()
     {
         return $this->cnt_card;
@@ -103,10 +103,14 @@ class Deck
     private function set_deck($param_arr_card_num, $param_arr_card_shape)
     {
         // 카드 52장을 셋팅한다. 
+        
         foreach($param_arr_card_shape as $shape_key => $shape_num)
         {
+            foreach($param_arr_card_num as $num)
+            {
             // arr_deck 배열의 원소값에 추가 
-            $this->arr_deck[] = array( STR_CARD_NUM => $num, STR_CARD_SHAPE_KEY => $shape_key);
+                $this->arr_deck[] = array( STR_CARD_NUM => $num, STR_CARD_SHAPE_KEY => $shape_key);
+            }
         }
         // 덱 섞음
         shuffle( $this->arr_deck );
@@ -324,7 +328,7 @@ class Play
 
     public function print_result($param_arr,$param_int_result,$param_str_con)
     {
-        $str = implode(",  ", $param_arr)."  ";
+        $str = implode(", ", $param_arr)."  ";
         switch($param_int_result)
         {
             case 0:
