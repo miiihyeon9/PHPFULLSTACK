@@ -39,9 +39,9 @@ $arr_prepare =
 stmt($sql);
 
 
-// $stmt = $obj_conn->prepare( $sql );
-// $stmt->execute( $arr_prepare );
-// $result = $stmt->fetchAll();
+$stmt = $obj_conn->prepare( $sql );
+$stmt->execute( $arr_prepare );
+$result = $stmt->fetchAll();
 
 
 

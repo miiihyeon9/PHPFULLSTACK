@@ -4,7 +4,7 @@ function my_db_conn( &$param_conn )
 {
     $db_host = "localhost"; // 원래는 아이피가 들어감
     $db_user = "root";      // user
-    $db_password = "root506";   //password
+    $db_password = "0809";   //password
     $db_name = "employees";     // DB name
     $db_charset = "utf8mb4";    //charset
     $db_dns = "mysql:host=".$db_host.";dbname=".$db_name.";charset=".$db_charset;
@@ -17,8 +17,6 @@ function my_db_conn( &$param_conn )
     // PDO class로 DB 연동
     $param_conn = new PDO( $db_dns, $db_user, $db_password, $db_option);
 }
-
-
 
 
 ?>
