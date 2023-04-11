@@ -179,6 +179,7 @@ class Food
     // 멤버 변수
     protected $str_name ;
     protected $int_price ;
+    
 
     // 메소드(함수) 
     public function __construct( $param_name, $param_price )               // __construct : 생성자
@@ -243,13 +244,16 @@ class KoreanFood extends Food
     {
         $this->str_name = $param_name;
         $this->int_price = $param_price;
+        // str_name 과 int_price는 부모 클래스인 Food에 있는 변수
         $this->side_dish = $param_side_dish;
+       
     }
-
+    
     public function fnc_print_food()
     {
         // $str = $this->str_name." : ".$this->int_price."원 : ".$this->side_dish;
         parent::fnc_print_food();
+        // 오버라이딩 : 부모클래스에서 정의된 메소드를 자식클래스에서 재정의 
         $str = "반찬 : ".$this->side_dish."\n";
         echo $str;
     }
@@ -259,7 +263,6 @@ class KoreanFood extends Food
 $obj_korean_food = new KoreanFood( "치킨", 20000, "치킨무");
 $obj_korean_food->fnc_print_food();
 
-// 오버라이딩 : 부모클래스에서 정의된 메소드를 자식클래스에서 재정의 
 
 
 

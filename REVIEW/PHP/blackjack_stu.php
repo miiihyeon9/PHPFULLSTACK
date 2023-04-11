@@ -22,33 +22,34 @@ class Card
         $this->arr_card_shape   = array( "♥", "◆", "♣", "♠");
     }
 
-    // break 안쓴 이유 물어보기
-
+    
     // 함수 : 카드별 점수 주기 
     public function get_card_num_score( $param_num, $param_score )
     {
         switch ( $param_num )
+        // break 안쓴 이유 물어보기
         {
             case "J":       // J,Q,K 는 점수 10점
             case "Q":
             case "K":
                 return 10;
-                break;
+                // return을 하면 함수가 종료되고 이 값을 주기 때문에 break없어도 됨
+                
             case "A":       // A가 $param_num가 10점이 넘을 경우에는 1점을 반환하고
                             // 그게 아니면 11점 반환
                 if($param_score > 10)
                 {
                     return 1;
-                    break;
+                    
                 }
                 else
                 {
                     return 11;
-                    break;
+                    
                 }
             default:
                 return (int)$param_num;  
-                break;   // 문자인 $param_num를 int로 변환한다. 
+                   // 문자인 $param_num를 int로 변환한다. 
         }
     }
 
@@ -371,9 +372,49 @@ class Play
         echo "---------- BlackJack start ----------\n";
         // game class set_card 함수 실행
         $this->set_card();
+                //     public function set_card()
+                // {
+                // 	if( sizeof( $this->obj_user->get_hand() ) > 0 )
+                // 	{
+                //      카드가 한장 이상 있을 때 플레이어와 딜러에게 한장씩
+                // 		$this->obj_user->set_var( $this->obj_deck );
+                // 		$this->obj_dealer->set_var( $this->obj_deck );
+                // 	}
+                // 	else
+                // 	{
+                    // 게임 처음 시작 했을 때 
+                // 		$this->obj_user->set_var( $this->obj_deck );
+                // 		$this->obj_dealer->set_var( $this->obj_deck );
+                // 		$this->obj_user->set_var( $this->obj_deck );
+                // 		$this->obj_dealer->set_var( $this->obj_deck );
+                // 	}
+                // }
         $flg_clare_card = false;
         // game class open_player_card 함수 실행
-        $this->open_player_card();
+                //     $this->open_player_card();
+                //     public function open_player_card()
+                // {
+                // 	$this->obj_user->print_open_card();
+                                        // public function print_open_card()
+                                        // {
+                                        //     $str = $this->player_name;
+                                        //     foreach( $this->hand as $card )
+                                        //     {
+                                        //         $str .= $this->obj_card->get_card_shape($card[STR_CARD_SHAPE_KEY]).$card[STR_CARD_NUM]." ";
+                                        //     }
+                                        //     echo $str;
+                                        // }
+
+
+                // 	// ************** DEBUG **************
+                // 	if( FLG_DEBUG )
+                // 	{
+                // 		$this->obj_dealer->print_open_card();
+                // 	}
+                // 	// ************** DEBUG **************
+
+                // 	echo "\n";
+                // }
         while(true)
         {
             fscanf(STDIN, "%d", $inplut);
@@ -394,6 +435,7 @@ class Play
                 }
             }
 
+            // 카드 한장 더 받기 
             if( $input === 1 )
             {
                 $this->set_card();
@@ -405,6 +447,8 @@ class Play
                     // if( $flg_clare_card ) 실행됨
                 } 
             }
+
+            // 비교하기 
             else if ( $input === 2)
             {
                 if( !$this->chk_score() )
@@ -415,6 +459,7 @@ class Play
                 $flg_clare_card = true;
                 // 위에 if( $flg_clare_card ) 실행됨
             }
+            // 종료 
             else if( $input === 0 )
             {
                 break;
