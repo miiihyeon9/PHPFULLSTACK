@@ -139,8 +139,11 @@ function select_board_no(&$param_arr)
     {
         $obj_con = null;//     데이터베이스 종료
     }
-    return $result;
+    return $result[0];
 }
 
+// $arr =array("board_no"=>20);
+// select_board_no($arr);
+// var_dump(select_board_no($arr));
 
 ?>

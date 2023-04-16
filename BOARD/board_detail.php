@@ -4,10 +4,10 @@ define("URL_FNC",ROOT."function.php");
 include_once(URL_FNC);
 $arr_get = $_GET;
 
-$detail = select_board_no($arr_get["board_no"]);
+$detail = select_board_no($arr_get);
 
-print_r($detail);
-
+// print_r($detail);
+var_dump($_SERVER);
 ?>
 
 <!DOCTYPE html>
@@ -23,10 +23,11 @@ print_r($detail);
         <div>게시물 번호</div>
         <div><?php echo $detail["board_no"] ?></div>
         <div>게시물 작성일</div>
-        <div></div>
+        <div><?php echo $detail["board_write_date"] ?></div>
         <div>게시물 제목</div>
-        <div></div>
+        <div><?php echo $detail["board_title"] ?></div>
         <div>게시물 내용</div>
+        <div><?php echo $detail["board_contents"] ?></div>
     </div>
 </body>
 </html>

@@ -2,7 +2,8 @@
 define("ROOT",$_SERVER["DOCUMENT_ROOT"]."/BOARD/");
 define("URL_FNC",ROOT."function.php");
 include_once(URL_FNC);
-
+var_dump($_SERVER);
+var_dump($_SESSION);
 // board_del_flg = '0'인 데이터 가져오기
 $bring_list = select_board();
 
