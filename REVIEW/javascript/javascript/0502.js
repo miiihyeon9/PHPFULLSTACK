@@ -14,7 +14,7 @@
 // console.log(star);
 
 
-//todo : 오늘 배운 것 복습 
+//todo : 변수, 함수, 스코프, 호이스팅, 데이터타입, 함수, 반복문
 // ! 변수 ( var , let, const )
 
 // * var ( 함수 레벨 스코프 )
@@ -223,7 +223,10 @@ for( let val in arrIn)
 
 
 // * for ... of
+
 // 인덱스 배열만 출력이 가능 . 배열에 따로 추가해도 인덱스만 출력이 된다. 
+// 모든 객체보다 symbol:iterator 속성이 있는 모든 컬렉션 요소에대해 반복
+
 arrof=[1,2,3,4,5];
 
 for(let o of arrof){
