@@ -31,27 +31,25 @@ for(let i = 1; i<=num;i++)
 //     }
 // }
 
-// 
-
-
-let alertResult = result.filter(
-function (val){
-        let remain = 0;
-        for(let j =1 ; j<= val ; j++)
+function param(val){
+    let remain = 0;
+    for(let j =1 ; j<= val ; j++)
+    {
+        if(val%j===0)
         {
-            if(val%j===0)
-            {
-                remain++;
-            }
+            remain++;
         }
-        if(remain === 2)
-        {
-            return true;
-        }else{
-            return false;
-        }
+    }
+    if(remain === 2)
+    {
+        return true;
+    }else{
+        return false;
+    }
 }
-)
+
+
+let alertResult = result.filter(val=>param(val));
 
 // result.filter()
 
