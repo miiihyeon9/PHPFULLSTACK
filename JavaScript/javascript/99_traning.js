@@ -54,4 +54,21 @@ let alertResult = result.filter(val=>param(val));
 // result.filter()
 
 
+function sosu(val){
+// 1은 미리 false로 빼주고
+    if(val === 1){
+        return false;
+    }
+    // 2보다 크고 val 보다 작은 수로 val를 나누었을 때 나머지가 없으면 
+    // i는 val의 약수이다. 
+    for(let i =2; i<val; i++){
+        if(val%i === 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+let alertsosu = result.filter(val=>sosu(val));
 
