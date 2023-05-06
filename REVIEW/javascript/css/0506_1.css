@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu{
+    background-image: url('../images/menu.png');
+    background-size:cover;
+    background-position : center;
+    background-repeat:no-repeat;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    transition : 0.3s;
+    z-index: 999;
+    position:absolute;
+    right:20px;
+}
+
+
+li{
+    line-height: 1.5em;
+}
+
+li a{
+    text-decoration: none;
+    color : white;
+} 
+
+
+.menu.active{
+    background-image: url('../images/cancel.png');
+    background-size:cover;
+    background-position : center;
+    background-repeat:no-repeat;
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    transition : 0.3s;
+    z-index: 999;
+
+}
+
+.side_menu{
+    width:100px;
+    position : absolute;
+    top:60px;
+    text-align: center;
+    right : 20px;
+    transition: all ease 10s 0s;
+    opacity:0;
+    list-style: none;
+    transition: opacity 0.5s;
+}
+
+.side_menu.active{
+    width:100px;
+    position : absolute;
+    top:60px;
+    text-align: center;
+    right : 20px;
+    transition: all ease 10s 0s;
+    display:flex;
+    flex-direction:column;
+    background-color: black;
+    color : white;
+    list-style: none;
+    opacity:1;
+    transition: opacity 0.5s;
+
+}
+

@@ -67,7 +67,6 @@ function sosu(val){
             return false;
         }
     }
-    return true;
 }
 
 let alertsosu = result.filter(val=>sosu(val));
