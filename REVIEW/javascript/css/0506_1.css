@@ -48,10 +48,11 @@ li a{
     top:60px;
     text-align: center;
     right : 20px;
-    transition: all ease 10s 0s;
     opacity:0;
     list-style: none;
-    transition: opacity 0.5s;
+    transition: opacity 5s;
+    display:flex;
+    flex-direction:column;
 }
 
 .side_menu.active{
@@ -60,14 +61,13 @@ li a{
     top:60px;
     text-align: center;
     right : 20px;
-    transition: all ease 10s 0s;
+    list-style: none;
     display:flex;
     flex-direction:column;
     background-color: black;
     color : white;
-    list-style: none;
     opacity:1;
-    transition: opacity 0.5s;
-
+    transition: opacity 5s;
+    
 }
 
