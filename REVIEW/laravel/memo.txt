@@ -1,0 +1,32 @@
+1. 원하는 버전으로 설치
+composer create-project laravel/laravel 프로젝트명 --prefer-dist "5.8.*"
+
+2. 서버 확인 
+php artisan serve
+
+3. 폴더 설명
+    1. .env = 중요한 키와 패스워드 저장.
+    2. app 
+        Models -> User.php
+    3. database
+    4.resources css, js 
+    5.routes
+        views에 인덱스 있음
+    6.Http -> controller 
+
+4.  jetstream 설치 
+    composer require  laravel/jetstream
+    php artisan jetstream:install livewire
+    php artisan jetstream:install inertia
+
+
+npm install && npm run dev
+
+
+
+// 서버 시작 php artisen serve
+/app
+
+
+// 테이블 생성
+php artisan migrate
