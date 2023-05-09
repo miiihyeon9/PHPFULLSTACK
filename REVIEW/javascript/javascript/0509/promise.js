@@ -1,7 +1,7 @@
 // !promise
 // : 비동기적인 것을 수행하기위해 콜백함수 대신에 사용
 // 1. 상태
-// pendingtkdxo -> fulfilled or rejected
+// pending상태(보류중) -> fulfilled or rejected
 // Producer vs Consumer
 // resolve, reject
 

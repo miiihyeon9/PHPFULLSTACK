@@ -12,7 +12,7 @@ async function fetchUser(){
 
 // 오래 걸리는 코드를 비동기적인 처리를 하지 않을 경우 
 // 자바스크립트 엔진은 동기적으로 작동이 되기 때문에 
-
+// 한줄이 끝난후에 그 다음 코드가 실행됨
 const user = fetchUser();
 user.then(console.log);
 console.log(user);

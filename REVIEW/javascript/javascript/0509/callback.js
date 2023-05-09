@@ -75,7 +75,7 @@ userStorage.loginUser(id,password,(user)=>{
     userStorage.getRoles(user,userWithRole=>{
         alert(`hello ${user.name}, you have a ${userWithRole.role} role`);
     },error=>{
-        console.log('error');
+        console.log(error);
     }
     );
 },(error)=>{console.log(error)})
