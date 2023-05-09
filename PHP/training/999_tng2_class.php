@@ -27,6 +27,7 @@ class Student extends people{
     }
 }
 
+
 $obj_Student = new Student("김미현","rlaalgus");    
 $obj_Student->studentPrint();
 

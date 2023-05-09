@@ -23,11 +23,15 @@
 //         console.log(i);
 //     }
 // }
-let i = 1;
-setInterval(timer,1000);
-function timer(){
-    if(i<=5){console.log(i++)}
-}
+
+//   clearInterval 안해주면 console로만 안찍히는거 뿐이지 setInterval이 계속 돌아가기 때문에 clearInterval 해줘야함
+// let i = 1;
+// setInterval(timer,1000);
+// function timer(){
+//     if(i<=5){console.log(i++)}
+// }
+
+
 
 let j = 1;
 const interval1 = setInterval(()=>{
