@@ -70,6 +70,8 @@ pickFruits().then(console.log);
 
 // 3. useful Promis APIs
 // Promise.all : 프로미스 배열을 전달하면 모든 프로미스를 병렬적으로 모아줌
+
+
 function pickAllFruits(){
     return Promise.all([getApple(),getBanana()])
     .then(fruits=>fruits.join(' + '));

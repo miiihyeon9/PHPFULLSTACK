@@ -1,0 +1,23 @@
+.col1{
+    background-color: red;
+}
+
+.col2{
+    background-color: yellow;
+}
+.col3{
+    background-color: green;
+}
+
+main {
+    height : 70vh;
+}
+
+
+.black{
+    background-color: black;
+}
+
+.gray{
+    background-color: gray;
+}

@@ -1,30 +1,23 @@
-<?php
 
-// function db_conn( &$param_conn )
-// {
-//     $host = "localhost"; 
-//     $user = "root";      
-//     $password = "root506";   
-//     $name = "site";     
-//     $charset = "utf8mb4";   
-//     $dns = "mysql:host=".$host.";dbname=".$name.";charset=".$charset;
-//     $pdo_option = array(
-//                 PDO::ATTR_EMULATE_PREPARES      => false     
-//                 , PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION
-//                 , PDO::ATTR_DEFAULT_FETCH_MODE  => PDO::FETCH_ASSOC  
-//                 );  
-//     try
-//     {
-//         $param_conn = new PDO( $dns, $user, $password, $pdo_option);
-//     }
-//     catch( Execption $e)
-//     {
-//         $param_conn = null;
-//         throw new Exception( $e->getMessage() );
-
-//     }    
-// }
-
-
-
-?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="check.php" method="post" >
+        <fieldset>
+        <label for="user_name" class="txt">아이디</label>
+            <input type="text" name="user_name" id="user_name" class="u_id" autofocus required >
+            <br>
+            <label for="user_password" class="txt">비밀번호</label>
+            <input type="password" name="user_password" id="user_password" class="user_password">
+            <br>
+            <button type="submit" class="btn">로그인</button>
+        </fieldset>
+    </form>
+</body>
+</html>

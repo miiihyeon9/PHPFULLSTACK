@@ -51,6 +51,7 @@ let obj1 = {
 }
 
 // * 배열 (Array)
+
 let arr = [ "Mon", "Tue","Wed", "Thu", "Fri", "Sat", "Sun" ];
 
 // * Date
