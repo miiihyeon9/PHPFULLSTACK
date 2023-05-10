@@ -3,7 +3,7 @@ function db_conn( &$param_conn )
 {
     $host = "localhost"; 
     $user = "root";      
-    $password = "root506";   
+    $password = "0809";   
     $name = "site";     
     $charset = "utf8mb4";   
     $dns = "mysql:host=".$host.";dbname=".$name.";charset=".$charset;
@@ -24,33 +24,34 @@ function db_conn( &$param_conn )
     }    
 }
 
-function login(&$param_name,&$password){
+function login(&$param_arr){
     $sql = " SELECT "
-            ." * "
+            ." user_id "
+            ." ,user_password "
             ." FROM "
             ." login "
             ." WHERE "
-            ." user_name ="
-            ."$user_name" 
+            ." user_id ="
+            ." :user_id" 
             ." and "
             ." user_password ="
-            ."$user_password" 
+            ." :user_password " 
             ;
             
-    // $arr_prepare = array
-    //             (
-    //                 ":limit_num"     => $param_arr["limit_num"] 
-    //                 , ":offset"   => $param_arr["offset"]
-    //             );
+    $arr_prepare = array
+                (
+                    ":user_id"     => $param_arr["user_id"] 
+                    , ":user_password"   => $param_arr["user_password"]
+                );
     
     $conn = null;
     try 
     {
         db_conn( $conn );
-        $stmt = $conn->query( $sql );
-        // $stmt->execute( $arr_prepare);
-        // $result = $stmt->fetchALL();
-        $result_cnt = $stmt->rowCount();
+        $stmt = $conn->prepare( $sql );
+        $stmt->execute( $arr_prepare);
+        $result = $stmt->fetchALL();
+        // $result_cnt = $stmt->rowCount();
     } 
     catch (Exception $e) 
     {
@@ -60,7 +61,7 @@ function login(&$param_name,&$password){
     {
         $conn = null;//     데이터베이스 종료
     }
-    return $result_cnt;
+    return $result[0];
 }
 
 

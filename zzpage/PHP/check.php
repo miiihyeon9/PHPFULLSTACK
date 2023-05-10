@@ -1,84 +1,35 @@
 <?php
-// define("QUERY",$_SERVER["DOCUMENT_ROOT"]."/src/PHP/query.php");
-// include_once(QUERY);
-function db_conn( &$param_conn )
-{
-    $host = "localhost"; 
-    $user = "root";      
-    $password = "root506";   
-    $name = "site";     
-    $charset = "utf8mb4";   
-    $dns = "mysql:host=".$host.";dbname=".$name.";charset=".$charset;
-    $pdo_option = array(
-                PDO::ATTR_EMULATE_PREPARES      => false     
-                , PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION
-                , PDO::ATTR_DEFAULT_FETCH_MODE  => PDO::FETCH_ASSOC  
-                );  
-    try
-    {
-        $param_conn = new PDO( $dns, $user, $password, $pdo_option);
-    }
-    catch( Execption $e)
-    {
-        $param_conn = null;
-        throw new Exception( $e->getMessage() );
-
-    }    
-}
+define("SRC_ROOT", $_SERVER["DOCUMENT_ROOT"]."/login/");
+define("URL_DB", SRC_ROOT."PHP/query.php");
+include_once(URL_DB);
 
 $http_method = $_SERVER["REQUEST_METHOD"];
-$post = $_POST;
-
-if($http_method===$post){
-    $user_name = $post["user_name"];
-    $user_password = $post["user_password"];
-    
-    $sql = " SELECT "
-    ." * "
-    ." FROM "
-    ." login "
-    ." WHERE "
-    ." user_name ="
-    .$user_name 
-    ." and "
-    ." user_password ="
-    .$user_password 
-    ;
-
-        $conn = null;
-        try 
-        {
-            db_conn( $conn );
-            $stmt = $conn->query( $sql );
-            // $stmt->execute( $arr_prepare);
-            // $result = $stmt->fetchALL();
-            $result_cnt = $stmt->rowCount();
-        } 
-        catch (Exception $e) 
-        {
-            return $e->getMessage();
-        }
-        finally
-        {
-            $conn = null;//     데이터베이스 종료
-        }
 
 
-    $savedID = 'mihyeon'; 
-    $savedPW = '12345678';
+if($http_method === "POST"){
+    $arr_post = $_POST;
 
-    $id = $user_name;
-    $pw = $user_password;
+    $arr_log = 
+    array(
+        "user_id"        => $arr_post["user_id"]
+        ,"user_password"    => $arr_post["user_password"]
+    );
 
+    $result = login($arr_log);
 
-        session_start(); //세션 시작 
+    if( ($arr_post["user_id"] === $result["user_id"] ) &&
+        ($arr_post["user_password"] === $result["user_password"]) )
+    {
+        session_start();    // 세션 시작
+        $session = $_SESSION;
+        $session["user_id"] = $result["user_id"];
+        session_id();       // 세션 아이디 출력
+        var_dump($session);
 
-        if($id === $savedID && $pw === $savedPW){ //post로 받은 정보와 저장된 정보를 비교합니다.
-            $_SESSION['id'] = $id; //세션에 key value 등록합니다.
-            $_SESSION['nickname'] = '관리자';
-            }
-        }
+    }
+}
 ?>
+
 
 
 <!DOCTYPE html>
@@ -90,6 +41,6 @@ if($http_method===$post){
     <title>Document</title>
 </head>
 <body>
-    
+        <div class="log"> 반갑습니다. <?php echo $session['user_id'] ?> 님</div>
 </body>
 </html>

@@ -1,0 +1,5 @@
+CREATE TABLE login(
+log_no INT(11) PRIMARY KEY AUTO_INCREMENT
+, user_id VARCHAR(100) NOT NULL
+, user_password VARCHAR(100) NOT null
+);
