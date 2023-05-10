@@ -23,11 +23,15 @@ if($http_method === "POST"){
         session_start();    // 세션 시작
         $session = $_SESSION;
         $session["user_id"] = $result["user_id"];
-        session_id();       // 세션 아이디 출력
-        var_dump($session);
-
+        // session_id();       // 세션 아이디 출력
+            // var_dump($session);
+        
     }
+    // else{
+    //     header("Location : join_member.php");
+    // }
 }
+
 ?>
 
 
@@ -42,5 +46,6 @@ if($http_method === "POST"){
 </head>
 <body>
         <div class="log"> 반갑습니다. <?php echo $session['user_id'] ?> 님</div>
+        <a href="logout.php">로그아웃</a>
 </body>
 </html>
