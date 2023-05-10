@@ -17,33 +17,14 @@ if($http_method === "POST"){
 
     $result = login($arr_log);
 
-        $conn = null;
-        try 
-        {
-            db_conn( $conn );
-            $stmt = $conn->query( $sql );
-            // $stmt->execute( $arr_prepare);
-            // $result = $stmt->fetchALL();
-            $result_cnt = $stmt->rowCount();
-        } 
-        catch (Exception $e) 
-        {
-            return $e->getMessage();
-        }
-        finally
-        {
-            $conn = null;//     데이터베이스 종료
-        }
-
-
-    $savedID = 'mihyeon'; 
-    $savedPW = '12345678';
-
-    $id = $user_name;
-    $pw = $user_password;
-
-
-        session_start(); //세션 시작 
+    if( ($arr_post["user_id"] === $result["user_id"] ) &&
+        ($arr_post["user_password"] === $result["user_password"]) )
+    {
+        session_start();    // 세션 시작
+        $session = $_SESSION;
+        $session["user_id"] = $result["user_id"];
+        session_id();       // 세션 아이디 출력
+        var_dump($session);
 
     }
 }
