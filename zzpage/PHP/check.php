@@ -1,5 +1,8 @@
 <?php
-define("SRC_ROOT", $_SERVER["DOCUMENT_ROOT"]."/login/");
+// define("SRC_ROOT", $_SERVER["DOCUMENT_ROOT"]."/login/");        // 집
+// define("URL_DB", SRC_ROOT."PHP/query.php");     // 집
+
+define("SRC_ROOT", $_SERVER["DOCUMENT_ROOT"]."/src/");
 define("URL_DB", SRC_ROOT."PHP/query.php");
 include_once(URL_DB);
 

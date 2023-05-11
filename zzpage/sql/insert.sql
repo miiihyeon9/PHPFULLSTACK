@@ -4,5 +4,5 @@ user_id
 )
 VALUES
 (
-'mihyeon'
-,'12345678');
+'admin'
+,'1234');

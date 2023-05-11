@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<head lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" ></head>
+    <link rel="stylesheet" href="index.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+    <!-- ! 네비게이션 바 -->
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand shop_name" href="#">SHOPPING</a> -->
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- !리스트  -->
+                        <li class="navBtn">
+                            <a class="nav-link " role="button">Menu</a>
+                        </li>
+                    </ul>
+                    <a class="navbar-brand shop_name" href="#">SHOPPING</a>
+                    <!-- !검색 -->
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </button>
+                    </form>
+                    <!-- !My -->
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" fill="black" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                        </svg>
+                    </a> 
+
+                    <!-- !장바구니 -->
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" fill="black" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <div class="offCanGroup">
+        <p class="sideTitle">Outer</p>
+        <ul class="offCanList">
+            <li><a class="offCanList" href="#">Coat</a></li>
+            <li><a class="offCanList" href="#">f</a></li>
+            <li><a class="offCanList" href="#">d</a></li>
+        </ul>
+        <p class="sideTitle">Top</p>
+        <ul class="offCanList">
+            <li><a class="offCanList" href="#">Shirt</a></li>
+            <li><a class="offCanList" href="#">Hood</a></li>
+            <li><a class="offCanList" href="#">d</a></li>
+        </ul>
+        <p class="sideTitle">Bottom</p>
+        <ul >
+            <li ><a  class="offCanList" href="#">Shirt</a></li>
+            <li ><a class="offCanList" href="#">Hood</a></li>
+            <li ><a class="offCanList" href="#">d</a></li>
+        </ul>
+    </div>
+
+
+
+
+
+        <!-- !카드 (grid)-->
+    <div class="container">
+        <div class="row row-xxl-4">
+            <div class="col d-flex justify-content-center" >
+                <div class="card" style="width: 18rem;">
+                    <img src="고라파덕.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">고라파덕</h5>
+                        <p class="card-text">파덕?</p>
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            데려가기
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="고라파덕.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">고라파덕</h5>
+                            <p class="card-text">파아덕?</p>
+                            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                데려가기
+                            </button>
+                        </div>
+                </div>
+            </div>  
+        
+            <div class="col d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="고라파덕.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">고라파덕</h5>
+                        <p class="card-text">파덕파아덕?</p>
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            데려가기
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="고라파덕.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">고라파덕</h5>
+                        <p class="card-text">파덕파덕~</p>
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            데려가기
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="고라파덕.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">고라파덕</h5>
+                        <p class="card-text">파더어억!!!</p>
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            데려가기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+        <!--! 모달 -->
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        데려가기
+        </button> -->
+    
+        <!--! Modal -->
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">나</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                데려가쉴?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                <button type="button" class="btn btn-outline-success">데려갈게</button>
+            </div>
+            </div>
+        </div>
+        </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="index2.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

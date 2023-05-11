@@ -2,15 +2,16 @@
 
 
 
-// session_start();
+session_start();
 session_id();       // 세션 아이디 출력
-// var_dump($session);
+// // var_dump($session);
 
 
-// if(!(isset($session["user_id"]))){
-//     $session["user_id"]="";
+// if(isset($_SESSION["user_id"])){
+//     $_SESSION["user_id"]="";
 // }
 
+// var_dump($_SESSION["user_id"]);
 
 
 ?>
@@ -26,7 +27,7 @@ session_id();       // 세션 아이디 출력
     <title>Document</title>
 </head>
 <body>
-    <div>반갑습니다. <?php echo $session["user_id"]."님" ?> </div>
+    <div>반갑습니다. <?php echo $_SESSION["user_id"]."님" ?> </div>
     <a href="logout.php">로그아웃</a>
 </body>
 </html>

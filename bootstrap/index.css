@@ -1,0 +1,74 @@
+body{
+    margin : 0;
+    padding : 0;
+    background-color: #F8F9FA;
+    box-sizing: content-box;
+}
+
+/* .menu_right{
+    width:800px;
+} */
+.search_box{
+    padding-top: 20px;
+}
+#line{
+    border: 1px solid #000;
+}
+
+.shop_name {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.nav_drop{
+    background-color: #F8F9FA;
+}
+
+header{
+    border-bottom: 1px solid #000;
+}
+
+
+.offCanGroup{
+    /* display: none; */
+    border-right: 1px solid #000;
+    float: left;
+    width:200px;
+    list-style: none;
+    height:100vh;
+    opacity:0;
+    padding: 0 20px;
+    list-style:none;
+    text-decoration: none;
+}
+
+.offCanGroup.active{
+    /* display: */
+    float: left;
+    border-right: 1px solid #000;
+    width:200px;
+    list-style: none;
+    height:100vh;
+    z-index: 999;
+    opacity:1;
+    padding: 0 20px;
+    list-style:none;
+    text-decoration: none;
+}
+
+
+.sideTitle{
+    font-size: 1.1em;
+    font-weight: 900;
+    padding-top: 10px;
+    /* list-style: none;    */
+}
+
+.offcanList{
+    list-style:none;
+    text-decoration: none;
+}
+.offcanList.active{
+    list-style:none;
+    text-decoration: none;
+}
