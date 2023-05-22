@@ -1,0 +1,180 @@
+body{
+    margin : 0;
+    padding : 0;
+    background-color: #e2e2e2;
+    box-sizing: content-box;
+}
+
+/* .menu_right{
+    width:800px;
+} */
+
+
+.search_box{
+    padding-top: 20px;
+}
+
+/* #line{
+    border: 1px solid #000;
+} */
+
+
+.navBtn{
+    cursor:pointer;
+}
+.shop_name {
+    
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.nav_drop{
+    background-color: #F8F9FA;
+}
+
+/* header{
+    border-bottom: 1px solid #000;
+} */
+
+
+.offCanGroup{
+    /* display: none; */
+    position: fixed;
+    border-right: 1px solid #e2e2e2;
+    float: left;
+    width:200px;
+    list-style: none;
+    height:100vh;
+    opacity:0;
+    padding-left:20px;
+    transition: opacity 0.5s;
+    /* text-decoration: none; */
+
+}
+
+.offCanGroup.active{
+    /* display: */
+    float: left;
+    position: fixed;
+    border-right: 1px solid #e2e2e2;
+    width:200px;
+    list-style: none;
+    height:100vh;
+    z-index: 999;
+    opacity:1;
+    padding-left: 0 20px;
+    list-style: none;
+    transition: opacity 0.5s;
+    /* text-decoration: none; */
+}
+
+.navListGroup{
+    display:flex;
+}
+
+.sideTitle{
+    font-size: 1.1em;
+    font-weight: 900;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+.sideList{
+    text-decoration: none;
+    color : #000;
+    padding-left : 20px;
+    width:30%;
+}
+
+.searchBox{
+    width:400px;
+    margin:0 auto;
+}
+
+/* .navList{
+    padding-right : 10px;
+} */
+path{
+    width:30px;
+    height:30px;
+}
+
+
+h3{
+    text-align: center;
+    font-size:1.2em;
+    font-weight: 900;
+}
+
+.contentBox{
+    display: grid;
+    grid-template-columns: 200px auto;
+    background-color: #F8F9FA;
+    position: absolute;
+    top :116px;    
+}
+
+.carouselImgBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 400px;
+    padding : 20px;
+}
+
+
+.ListGroup{
+    padding: 30px;
+}
+
+.cardItems{
+    padding-top:30px;
+}
+
+.carouselImg{
+    object-fit: contain;
+}
+
+
+/* .modalBox{
+    position:absolute;
+    margin:0 auto;
+    top:50%; 
+    bottom:50%;
+     top:50%;
+
+    right: 50%;
+    transform:translateY(50%);
+} */
+
+/* .modalWrapper {
+    position: fixed;
+  } */
+
+  /* .modalCenter {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  } */
+
+
+  .modalWrapper {
+    position: fixed;
+  }
+  
+  .modalCenter {
+    margin: 0 auto;
+    /* max-width: 80%; */
+    width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .modalHeaderGroup{
+    display: flex;
+  }
+
