@@ -45,24 +45,24 @@ Route::get('/home',function(){
 // * GET요청에 대한 처리
 // 리소스를 요청한다. 
 // Route::get('/method',function(){
-//     return "Get Method !";
-// });
-
-// * POST요청에 대한 처리
-// 리소스를 생성한다.
-Route::post('/method',function(){
-    return "Post Method !";
-});
-
-// PUT과 DELETE는 api를 가져올 때 많이 사용
-// *PUT요청에 대한 처리
-// 기존에 있던 리소스를 덮어쓴다
-
-Route::put('/method',function(){
-    return 'Put Method';
-});
-
-// *DELETE요청에 대한 처리 
+    //     return "Get Method !";
+    // });
+    
+    // * POST요청에 대한 처리
+    // 리소스를 생성한다.
+    Route::post('/method',function(){
+        return "Post Method !";
+    });
+    
+    // PUT과 DELETE는 api를 가져올 때 많이 사용
+    // *PUT요청에 대한 처리
+    // 기존에 있던 리소스를 덮어쓴다
+    
+    Route::put('/method',function(){
+        return 'Put Method';
+    });
+    
+    // *DELETE요청에 대한 처리 
 // 기존에 있던 리소스를 삭제한다. 
 Route::delete('/method',function(){
     return 'DELETE Method';
@@ -72,15 +72,27 @@ Route::delete('/method',function(){
 // 어떠한 요청을 해도 any로 실행됨 
 // 만약에 any를 위에서 실행하고 밑에 post나 다른 요청을 하면 다른 요청이 실행됨. 
 // Route::any('/method',function(){
-//     return 'Any Method';
-// });
-
+    //     return 'Any Method';
+    // });
+    
 // * 특정 URL에서 어떤 HTTP메서드가 허용되는지 확인
 // 배열에는 어떤 메서드를 허용하는지 
 Route::match(['get','post'],'/method',function(){
     // get이나 post요청은 Match Method로 실행됨?
     return 'Match Method';
 });
+    
+// 동일한 URL을 공유하는 여러개의 라우트를 정의해야할때는 any,match,redirect보다 다른 것들을 먼저 정의해야
+// 의도대로 올바른 라우트가 일치하는지 확인
+
+//! web 라우트 파일 안에 정의된 POST, PUT, PATCH 또는 DELETE 를 가리키는 라우트들은 모두 'CSRF 토큰 필드'를 포함
+// CSRF(크로스-사이트 위조 공격):사이트 간 요청 위조는 인증된 사용자를 대신해서 승인되지 않은 커맨드를 악의적으로 활용하는 것
+// 리다이렉트 라우트
+// : 다른 URL로 리다이렉트 
+// Route::redirect('/here','/there');
+
+
+
 
 // 세그먼트 : 서브 디렉토리 
 //! 라우트에서 파라미터 제어
@@ -90,9 +102,16 @@ Route::match(['get','post'],'/method',function(){
                             // 전달받는 변수가 Request 타입의 클래스나 인터페이스(뼈대(인터페이스 안에 정의된 ))여야함. 
                             // $request에 Request라는 객체를 넣겠다. 
 Route::get('/query',function(Request $request){
+                            // 현재 HTTP 요청객체를 라우트 클로저에 자동으로 전달
     // get, post, put , delete 상관없이 데이터를 다 가져옴
     return $request->id." , ".$request->name;
 });
+
+
+
+
+
+
 
 //* URL에 세그먼트로 지정해서 지정 파라미터 획득
 // {}하고 해당하는 키 입력. 
@@ -185,4 +204,21 @@ Route::get('/makesign',function(){
 Route::get('/sign',function(){
     return "Sign !!";
 })->name('sign')->middleware('signed');
+
+
+
+
+//! 뷰 라우트
+// 첫 번째 인자 :URL, 두번째 인자 뷰 파일 이름, 세번째 인자로 view에 제공할 데이터들의 배열을 제공
+// Route::view('/welcome','welcome', ['name'=>'Taylor'] );
+// 뷰-View 라우트에서 라우트 파라미터를 사용할 떼에는 사용할 수 없는 매개변수명이 있습니다. 
+// 라라벨에 의해서 예약된 view, data, status, headers 라는 이름은 사용할 수 없습니다.
+
+
+// ! 라우트 리스트
+// php artisan route:list    (애플리케이션에 정의되어 있는 모든 라우트의 목록 조회)
+// php artisan route:list -v  (미들웨어 표시 가능)
+// php artisan route:list --except-vendor    (애플리케이션 고유의 라우트가 아닌 써드파티를 통해서 정의된 라우트를 표시 하지 않을 수 있습니다.)
+
+
 

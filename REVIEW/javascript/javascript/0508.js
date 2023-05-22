@@ -38,6 +38,8 @@ stopButton.addEventListener('click',function(){
     }
     stopAction=!stopAction;
 });
+
+
 restartButton.addEventListener('click',function(){
     restartAction =!restartAction;
     stopAction = false;
