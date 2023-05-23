@@ -183,6 +183,7 @@ Route::middleware('auth')->prefix('users')->group(function(){
 
 
 use Illuminate\Support\Facades\URL;
+// 서명 라우트는 보통 controller에 들어감
 Route::get('/makesign',function(){
     // 일반적인 url 링크 생성하기 
     // $baseUrl = route('invitations',['invitation'=>5816, 'group'=>678]);
@@ -221,4 +222,43 @@ Route::get('/sign',function(){
 // php artisan route:list --except-vendor    (애플리케이션 고유의 라우트가 아닌 써드파티를 통해서 정의된 라우트를 표시 하지 않을 수 있습니다.)
 
 
+
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+// 컨트롤러
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+// 컨트롤러 생성 : php artisan make:controller TestController
+use App\Http\Controllers\TestController;
+Route::get('/test',[TestController::class,'index'])->name('tests.index');
+
+// 커맨드로 컨트롤러 생성
+// php  artisan make:controller TasksController --resource
+
+use App\Http\Controllers\TasksController;
+
+Route::resource('/tasks', TasksController::class);
+
+// GET|HEAD        tasks ...................... tasks.index › TasksController@index  
+//   POST            tasks ...................... tasks.store › TasksController@store  
+//   GET|HEAD        tasks/create ............. tasks.create › TasksController@create  
+//   GET|HEAD        tasks/{task} ................. tasks.show › TasksController@show  
+//   PUT|PATCH       tasks/{task} ............. tasks.update › TasksController@update
+//   DELETE          tasks/{task} ........... tasks.destroy › TasksController@destroy
+//   GET|HEAD        tasks/{task}/edit ............ tasks.edit › TasksController@edit
+
+
+
+use App\Http\Controllers\BladeController;
+Route::get('/blade',[BladeController::class,'index'])->name('blade.index');
+
+use App\Http\Controllers\ReviewController;
+//  resource를 네이밍 하는 방법은 names() 헬퍼함수를 통해 바꿀 수 있음 .
+Route::resource('/review',ReviewController::class)->names([
+    'index'     => 'review.in'
+    ,'store'    => 'review.st'
+    ,'create'   => 'review.cr'
+    ,'show'     => 'review.sh'
+    // 모델을 찾을 수 없는 경우 동작 missing (review.in으로 리다이렉트 )
+])->missing(function(Request $request){
+    return Redirect::route('review.in');
+});
 
