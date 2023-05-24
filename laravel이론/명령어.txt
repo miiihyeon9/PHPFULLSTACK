@@ -21,3 +21,7 @@ php artisan migrate (테이블 생성)
 php artisan route:cache 라우트 캐시
 
 php artisan route:clear 라우트 캐시 제거
+
+
+옵션을 한개만 줄 때는 --두개
+php artisan make:model Board -mfs model 생성

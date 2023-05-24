@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
  */
 class UserFactory extends Factory
 {
+        //  더미 데이터를 만들 때 사용
     /**
      * Define the model's default state.
      *
