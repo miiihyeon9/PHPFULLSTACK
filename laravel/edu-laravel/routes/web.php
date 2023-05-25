@@ -250,15 +250,18 @@ Route::resource('/tasks', TasksController::class);
 use App\Http\Controllers\BladeController;
 Route::get('/blade',[BladeController::class,'index'])->name('blade.index');
 
-use App\Http\Controllers\ReviewController;
-//  resource를 네이밍 하는 방법은 names() 헬퍼함수를 통해 바꿀 수 있음 .
-Route::resource('/review',ReviewController::class)->names([
-    'index'     => 'review.in'
-    ,'store'    => 'review.st'
-    ,'create'   => 'review.cr'
-    ,'show'     => 'review.sh'
-    // 모델을 찾을 수 없는 경우 동작 missing (review.in으로 리다이렉트 )
-])->missing(function(Request $request){
-    return Redirect::route('review.in');
-});
+// use App\Http\Controllers\ReviewController;
+// //  resource를 네이밍 하는 방법은 names() 헬퍼함수를 통해 바꿀 수 있음 .
+// Route::resource('/review',ReviewController::class)->names([
+//     'index'     => 'review.in'
+//     ,'store'    => 'review.st'
+//     ,'create'   => 'review.cr'
+//     ,'show'     => 'review.sh'
+//     // 모델을 찾을 수 없는 경우 동작 missing (review.in으로 리다이렉트 )
+// ])->missing(function(Request $request){
+//     return Redirect::route('review.in');
+// });
 
+use App\Http\Controllers\BoardController;
+
+Route::resource('/board',BoardController::class);
