@@ -1,15 +1,15 @@
 
 1. 라라벨 설치 
-composer create-project laravel/laravel="9" larabel-board
+composer create-project laravel/laravel="9" laravel-board
 
 
 2. ROOT 변경
-DocumentRoot "${SRVROOT}/htdocs/larabel-board/public"
-<Directory "${SRVROOT}/htdocs/larabel-board/public">
+DocumentRoot "${SRVROOT}/htdocs/laravel-board/public"
+<Directory "${SRVROOT}/htdocs/laravel-board/public">
 
 Apache 서버 재기동 필요
 
-larabel-board 디렉토리 안에서 아래 커멘드 실행
+laravel-board 디렉토리 안에서 아래 커멘드 실행
 php artian serve
 
 화면이 제대로 뜨면 완료 
@@ -25,3 +25,36 @@ php artisan route:clear 라우트 캐시 제거
 
 옵션을 한개만 줄 때는 --두개
 php artisan make:model Board -mfs model 생성
+
+
+
+
+
+
+프로젝트
+
+라우팅
+컨트롤러
+미들웨어
+뷰
+블레이드템플릿
+세션
+유효성검사
+error 핸들링
+
+
+Security
+인증
+권한 확인
+이메일 검증
+암호화
+해시
+패스워드 재설정
+
+database
+쿼리 빌더
+페이지 네이션
+마이그레이션
+시딩 
+
+테스팅
