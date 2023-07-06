@@ -1,0 +1,16 @@
+vue 설치
+1.node.js 18.16.1 버전 다운
+
+
+    1. vue 설치할 파일 이동 
+    2. 명령어 npm install -g @vue/cil 입력하고 설치
+    3. vue.cmd create 프로젝트명 입력
+    4. vue3 선택후 엔터
+ code .하면 해당 파일 vsc로 열어줌
+
+
+ public => 루트
+ 
+npm run serve
+
+확장프로그램 vetur, vue 3 snippets
