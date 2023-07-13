@@ -27,3 +27,12 @@ npm install axios
 
 router 4버전 패키지 설치
 npm install vue-router@4
+
+
+
+vue 로더
+- 뷰와 관련된 라이브러리 
+- 명령어 :  npm install vue@next vue-loader@next
+
+
+vue 컴파일
