@@ -1,6 +1,13 @@
 <template>
-  <div>
+  <div v-if="vFlg == 0">
+    <label for="id">ID</label>
+    <input type="text" name="id" id="id">
     <button @click="login()">로그인</button>
+  </div>
+  <div v-if="vFlg == 1">
+    <div v-for="item in list" :key="item">
+      {{item}}
+    </div>
   </div>
 </template>
 
@@ -9,23 +16,42 @@ import axios from "axios";
 
 export default {
   name: 'App',
-  data(){
+  data() {
     return {
-      token : '',
+      token: '',
+      list: null,
+      vFlg: 0,
     }
   },
-  methods:{
-    login(){
-      axios.get('http://localhost:8000/api/token?id=ppp')
-      .then(res =>{
+  methods: {
+    login() {
+      let id = document.getElementById('id').value;
+      axios.get('http://localhost:8000/api/token?id=', {id: id})
+      .then(res=> {
         console.log(res.data);
         this.token = res.data.token;
       })
+      .catch( err => {
+        if(err.status >= 400){
+          console.log(err);
+        }
+
+      });
+      
+      const header = {
+        'Authorization' : this.token,
+      }
+      axios.get('http://localhost:8000/api/list', {headers: header})
+      .then(res=> {
+        console.log(res.data);
+        this.list = res.data;
+        this.vFlg = 1;
+      })
+      .catch( err => {
+        console.log(err);
+      });
     },
-
-  }
-
-
+  },
 }
 </script>
 
