@@ -1,0 +1,12 @@
+1. windows 기능 켜기/끄기 -> hyper-v 체크하고 확인
+2. hyper-v 관리자 권한으로 실행
+3. DESKTOP -> 새로만들기 -> 영어로 이름
+
+
+
+putty
+winscp
+
+
+hyper-v linux setup guide
+
