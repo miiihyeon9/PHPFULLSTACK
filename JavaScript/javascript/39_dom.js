@@ -19,7 +19,7 @@ const tag = document.getElementsByTagName('li');
 
 // * 클래스명으로 요소를 선택하는 방법
 const listR = document.getElementsByClassName('list_r');
-list_r[1].style.backgroundColor = 'blue';
+listR[1].style.backgroundColor = 'blue';
 
 
 // querySelector로 가져온 아이들은 nodelist타입
@@ -128,3 +128,11 @@ function back(){
 }
 
 back();
+
+let domList = document.querySelectorAll('.domList');
+let domListToArray = Array.from(domList);
+
+console.log(domListToArray);
+domListToArray.forEach(function(element) {
+    element.style.color ="white";
+});

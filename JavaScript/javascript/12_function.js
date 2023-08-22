@@ -26,3 +26,15 @@ let add3 = ( a, b ) =>a + b;
 
 // * Function 생성자 함수
 let add4 = Function('a','b','return a+b;')
+
+
+function consol(){
+    let x = 1;
+    if(x == true){
+        let x = 2;
+        console.log(x);
+    }
+    console.log(x);
+}
+
+consol();
