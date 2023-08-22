@@ -13,4 +13,26 @@ vue 설치
  
 npm run serve
 
+
+
+npm install vuex@next
 확장프로그램 vetur, vue 3 snippets
+
+
+
+axios
+(api 이용한 데이터 가져오기 )
+해당 파일 경로 들어가서 
+npm install axios
+
+router 4버전 패키지 설치
+npm install vue-router@4
+
+
+
+vue 로더
+- 뷰와 관련된 라이브러리 
+- 명령어 :  npm install vue@next vue-loader@next
+
+
+vue 컴파일
