@@ -54,11 +54,9 @@ $counter ="COUNTER : " ;
     {
         if ($rsp_com == 0){
             echo $computer.$paper.$vs.$counter.$rock.$lose;
-        } else if ($rsp_com == 1)
-        {
+        } else if ($rsp_com == 1){
             echo $computer.$paper.$vs.$counter.$scissors.$win;
-        } else 
-        {
+        } else {
             echo $computer.$paper.$vs.$counter.$paper.$compare;
         }
     }

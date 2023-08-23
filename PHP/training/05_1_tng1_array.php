@@ -2,13 +2,13 @@
 // 음식 종류 5개 이상을 배열로 만들어 주세요
 // var_dump는 전체를 보여주기 때문에 유저에게 보여줄 때는 사용해서는 안됨
 
-// $food = array("orange","apple","grape","pear","banana");
+$food = array("orange","apple","grape","pear","banana");
 // echo $food[3];
 
 
 
 // array $food 무작위
-// echo $food[rand(0,4)]."\n";
+echo $food[rand(0,4)]."\n";
 
 // $rand_num= rand(0,4);
 
@@ -52,36 +52,43 @@
 
 
 // print_r($arr_ass_del);  
+// var_dump($arr_ass_del);
 
 
 
-$food = array
-(
-    "bibimbap"=>"rice"
-    ,"sandwich"=>"bread"
-    , "삭제" => "값값"
-    ,"chicken"=>"chicken"
-    ,"latte"=>"milk"
-);
+// $food = array
+// (
+//     "bibimbap"=>"rice"
+//     ,"sandwich"=>"bread"
+//     , "삭제" => "값값"
+//     ,"chicken"=>"chicken"
+//     ,"latte"=>"milk"
+// );
 
-// foreach 문을 이용해서 키가 "삭제"해 주세요.
+// // foreach 문을 이용해서 키가 "삭제"해 주세요.
 
-foreach($food as $delete =>$val)
-    {
-        if($delete === "삭제")
-        {
-            unset($food[$delete]);
-        }
-        else
-        {
-        echo $delete." : ".$val."\n";
-        }
-    }
+// foreach($food as $delete =>$val)
+//     {
+//         if($delete === "삭제")
+//         {
+//             unset($food[$delete]);
+//         }
+//         else
+//         {
+//         echo $delete." : ".$val."\n";
+//         }
+//     }
 
-print_r($food);
-var_dump($food);
+// print_r($food);
+// var_dump($food);
 
 
+$test = ['월요일','화요일','수요일','목요일','금요일','토요일','일요일'];
+unset($test[1],$test[2]);
 
+// var_dump($test);
+$arr = array_values($test);
+
+var_dump($arr);
 
 ?>
